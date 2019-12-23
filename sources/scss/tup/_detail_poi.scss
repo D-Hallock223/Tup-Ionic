@@ -1,0 +1,149 @@
+$detail_poi_padding_left : 17px;
+.picto{
+    background: url(../img/picto.png) left top 0px no-repeat;
+    background-size: 20px 20px;
+}
+.margin{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.margin-top{
+    margin-top: 7px;
+}
+
+#detail_poi {
+	.bar-header .row, .bar-footer .row {
+		padding: 0 $detail_poi_padding_left;
+	}
+
+    .title_poi {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+	.bar-header {
+		height: $height-map-bigsmall-footer;
+		border: none;
+		padding: 0;
+		position: relative;
+		top: $bar-height;
+		
+		.col_right {
+			font-size: 16px;
+		}
+		
+		#detail_poi_type {
+			font-size: 14px;
+		}
+		
+		.tupicon-walker {
+			position: absolute;
+			right: 16px;
+			padding: 14px 16px 14px 15px;
+			z-index: 10000000028;
+			font-size: 19px;
+			top: 59px;
+		}
+	}
+	p { margin: 0; }
+	
+	.scroll-content {
+		bottom: $height-map-little-footer;
+		padding-bottom: 15px;
+	}
+	
+	#poi_timewalk {
+		margin-top: -20px;
+		border-bottom: 1px solid $color-gris-6;
+        padding: 8px $detail_poi_padding_left;
+	}
+
+	#poi_padding {
+		padding: 0 $detail_poi_padding_left;
+		
+		.row {
+			padding-top: 28px;
+		}
+	
+	}
+	
+	.detail_poi_operation {
+		margin-top: 28px;
+		padding: $detail_poi_padding_left;
+		background: $calm;
+		text-align: justify;
+	
+		img { max-width: 100%; padding-bottom: $detail_poi_padding_left; }
+		
+		.detail_poi_operation_title {
+			padding-bottom: $detail_poi_padding_left;
+			color: $color-ope-speciale;
+		}
+	}
+	[class*="#{$ionicons-prefix}"] {
+		font-size: 20px;
+	}
+	
+	.col_left {
+		width: 35px;
+		max-width: 35px;
+	}
+	
+	#poi_content {
+		font-size: 13px;
+		top: $height-map-bigsmall-footer;
+		position: relative;
+		padding-bottom: 15px;
+	}
+	
+	.bar-footer {
+		border-top: 1px solid $color-gris-3;
+		height: $height-map-little-footer;
+		padding: 0;
+	}
+	
+	.detail_poi_footer {
+		font-size: 12px;
+		width: 100%;
+		
+		#block_signal {
+			background: $light;
+			padding: 10px $detail_poi_padding_left;
+			color: $energized;
+			
+			img {
+				vertical-align: middle;
+				margin-right: 10px;
+			}
+		}
+
+		#block_sida {
+			display: none;
+		}
+	}
+}
+
+#detail_poi.page_depistage {
+	.scroll-content {
+		bottom: $height-map-little-footer;
+	}
+	
+	.bar-footer {
+		height: $height-map-little-footer;
+	}
+	
+	#block_sida {
+		display: block;
+		padding: 13px 0;
+		background: $calm;
+		margin: 0;
+		
+		.ico-sida {
+			background: url(../img/rapport/sida.png) no-repeat center left;
+			background-size: 25px;
+			padding: 12px 0 14px 35px;
+		}
+	}
+}

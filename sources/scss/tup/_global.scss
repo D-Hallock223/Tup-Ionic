@@ -1,0 +1,49 @@
+.cookies{
+    text-align:center;
+    background-color:#cecece;
+    }
+    .bround_5px {
+	@include border-radius( 5px );
+}
+
+.bround_50p {
+	@include border-radius( 50% );
+}
+
+.fw_b { font-weight: bold; }
+
+a {
+	text-decoration: none;
+	color: $royal;
+}
+
+.row, .col { padding: 0; }
+
+$color-depistage-fixe		: #FF6923 !default;
+$color-depistage-mobile 	: #00E8C0 !default;
+$color-distributeur			: #B3006E !default;
+$color-mairie				: #175B68 !default;
+$color-metro				: #269EB2 !default;
+$color-ope-speciale			: #00E8C0 !default;
+$color-plan-fam				: #B33500 !default;
+$color-presse				: #EA0084 !default;
+$color-supermarche			: #EA5100 !default;
+
+.pharmacie_bg { background-color: $assertive; }
+.depistage_fixe_bg { background-color: $stable; }
+.depistage_mobile_bg { background-color: $color-depistage-mobile; }
+.distributeur_bg { background-color: $color-distributeur; }
+.mairie_bg { background-color: $color-mairie; }
+.metro_bg { background-color: $color-metro; }
+.planning_familial_bg, .ivg_bg, .centre_decoute_bg { background-color: $color-plan-fam; }
+.presse_bg { background-color: $color-presse; }
+.supermarche_bg { background-color: $stable; }
+.operation_speciale_bg { background-color: $color-ope-speciale; }
+
+.platform-android .back-button { display: none; }
+
+.row, .col {
+	padding: 0 0;
+}
+
+

@@ -1,0 +1,14 @@
+{
+  "name": "TUP",
+  "integrations": {
+    "cordova": {}
+  },
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

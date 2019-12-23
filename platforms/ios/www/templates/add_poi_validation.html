@@ -1,0 +1,61 @@
+<ion-view title="{{ pageTitle }}" id="add_poi_validation" ng-controller="addPoiValidationContoller">
+	<ion-content has-bouncing="false">
+		<ion-header-bar class="bar bar-light">
+			<div class="row row-center dark text-center fw_b">
+				<div style="padding-bottom: 20px;" class="col">
+					Confirmer l'ajout d'un nouveau lieu
+				</div>
+			</div>
+		</ion-header-bar>
+		
+		<div id="add_distribution_content">
+			<div id="poi_padding">
+				<div class="row row-center">
+					<div class="col col_left" id="add_poi_validation_type">
+						<img src="./img/map/svg_normal/{{ lieu.typeless }}.svg" />
+					</div>
+					
+					<div class="col col_right">
+						<p>{{ lieu.nom }}</p>
+						<p>{{ lieu.type }}</p>
+					</div>
+				</div>
+				
+				<div class="row row-center">
+					<div class="col col_left tupicon-poi energized"></div>
+					<div class="col col_right">
+						<span class="energized">Adresse</span><br />
+						<span>{{ lieu.adresse1 }}</span><span> {{ lieu.codePostal }} {{ lieu.ville }}</span>
+					</div>
+				</div>
+				
+				<div class="row row-center" ng-if="lieu.telephone">
+					<div class="col col_left tupicon-phone energized"></div>
+					<div class="col col_right">
+						<span class="energized">Téléphone</span><br />
+						<span>{{ lieu.telephone }}</span>
+					</div>
+				</div>
+				
+				<div class="row" ng-if="horaires">
+					<div class="col col_left tupicon-clock energized"></div>
+					<div class="col col_right">
+						<span class="energized">Horaires</span><br />
+						<p ng-repeat="libelle in horaires">{{ libelle }}</p>
+					</div>
+				</div>
+			</div>
+			
+			<div id="add_poi_validation_btns">
+				<div class="row row-center">
+					<div class="col">
+						<button class="button button-full royal_bg light bround_5px" ng-click="submitLieu(); gaTrackEvent( 'TUP', 'ajout', 'confirmation' )" id="add_poi_validation_confirm_btn">CONFIRMER</button>
+					</div>
+					<div class="col">
+						<button class="button button-full light bround_5px" ng-click="changeLieu(); gaTrackEvent( 'TUP', 'ajout', 'modification' )" id="add_poi_validation_change_btn">MODIFIER</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

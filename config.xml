@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.merk.tup" version="0.0.49" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>TUP</name>
+    <description>An Ionic Framework and Cordova project.</description>
+    <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <allow-intent href="*" />
+    <feature name="StatusBar">
+        <param name="ios-package" onload="true" value="CDVStatusBar" />
+    </feature>
+    <preference name="android-minSdkVersion" value="16" />
+    <preference name="android-targetSdkVersion" value="22" />
+    <preference name="BackupWebStorage" value="none" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="FadeSplashScreen" value="false" />
+    <preference name="AutoHideSplashScreen" value="false" />
+    <preference name="SplashScreenDelay" value="10000" />
+    <preference name="Orientation" value="portrait" />
+    <preference name="autorotate" readonly="true" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="StatusBarOverlaysWebView" value="true" />
+    <preference name="StatusBarBackgroundColor" value="#5b0e6f" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+        <icon density="ldpi" src="res/android/icon/ldpi.png" />
+        <icon density="mdpi" src="res/android/icon/mdpi.png" />
+        <icon density="hdpi" src="res/android/icon/hdpi.png" />
+        <icon density="xhdpi" src="res/android/icon/xhdpi.png" />
+        <splash density="port-hdpi" src="res/android/splash/splash-port-hdpi.png" />
+        <splash density="port-ldpi" src="res/android/splash/splash-port-ldpi.png" />
+        <splash density="port-mdpi" src="res/android/splash/splash-port-mdpi.png" />
+        <splash density="port-xhdpi" src="res/android/splash/splash-port-xhdpi.png" />
+        <splash density="hdpi" src="res/android/splash/splash-port-hdpi.png" />
+        <splash density="ldpi" src="res/android/splash/splash-port-ldpi.png" />
+        <splash density="mdpi" src="res/android/splash/splash-port-mdpi.png" />
+        <splash density="xhdpi" src="res/android/splash/splash-port-xhdpi.png" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+        <icon height="180" src="res/ios/icon/icon-60@3x.png" width="180" />
+        <icon height="60" src="res/ios/icon/icon-60.png" width="60" />
+        <icon height="120" src="res/ios/icon/icon-60@2x.png" width="120" />
+        <icon height="76" src="res/ios/icon/icon-76.png" width="76" />
+        <icon height="152" src="res/ios/icon/icon-76@2x.png" width="152" />
+        <icon height="40" src="res/ios/icon/icon-40.png" width="40" />
+        <icon height="80" src="res/ios/icon/icon-40@2x.png" width="80" />
+        <icon height="57" src="res/ios/icon/icon.png" width="57" />
+        <icon height="114" src="res/ios/icon/icon@2x.png" width="114" />
+        <icon height="72" src="res/ios/icon/icon-72.png" width="72" />
+        <icon height="144" src="res/ios/icon/icon-72@2x.png" width="144" />
+        <icon height="29" src="res/ios/icon/icon-small.png" width="29" />
+        <icon height="58" src="res/ios/icon/icon-small@2x.png" width="58" />
+        <icon height="50" src="res/ios/icon/icon-50.png" width="50" />
+        <icon height="100" src="res/ios/icon/icon-50@2x.png" width="100" />
+        <splash height="480" src="res/ios/splash/splash-default.png" width="320" />
+        <splash height="960" src="res/ios/splash/splash-default@2x.png" width="640" />
+        <splash height="1024" src="res/ios/splash/splash-default-ipad.png" width="768" />
+        <splash height="2048" src="res/ios/splash/splash-default@2x-ipad.png" width="1536" />
+        <splash height="1136" src="res/ios/splash/splash-default@2x-iphone.png" width="640" />
+        <splash height="1334" src="res/ios/splash/splash-default667h.png" width="750" />
+        <splash height="2208" src="res/ios/splash/splash-default736h.png" width="1242" />
+    </platform>
+    <engine name="android" spec="^6.3.0" />
+    <plugin name="cordova-plugin-dialogs" spec="~1.1.1" />
+    <plugin name="cordova-plugin-geolocation" spec="~1.0.1" />
+    <plugin name="uk.co.workingedge.phonegap.plugin.LaunchNavigator" spec="~2.9.6" />
+    <plugin name="com.phonegap.plugins.nativesettingsopener" spec="https://github.com/selahssea/Cordova-open-native-settings" />
+    <plugin name="cordova-plugin-inappbrowser" spec="https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git" />
+    <plugin name="cordova-plugin-statusbar" spec="~2.4.1" />
+    <plugin name="cordova-plugin-splashscreen" spec="~5.0.2" />
+    <plugin name="cordova-plugin-device" spec="~1.1.0" />
+    <plugin name="ionic-plugin-keyboard" spec="~1.0.8" />
+    <plugin name="cordova-plugin-whitelist" spec="~1.3.3" />
+    <plugin name="cordova-plugin-google-analytics" spec="~0.8.1" />
+    <plugin name="cordova-plugin-console" spec="~1.1.0" />
+    <plugin name="cordova-plugin-ionic-webview" spec="^4.0.0">
+        <variable name="ANDROID_SUPPORT_ANNOTATIONS_VERSION" value="27.+" />
+    </plugin>
+    <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
+</widget>

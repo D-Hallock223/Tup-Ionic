@@ -1,0 +1,77 @@
+#agirapresunrisque {
+	.padding {
+		padding: 0 20px;
+		
+		@media screen and (min-width: 380px) {
+			padding: 0 46px;
+		}
+	}
+	.has-footer { bottom: $height-medium-footer; }
+	
+	.scroll-content .row {
+			height: 50%;
+			
+			&.row-center {
+				@media screen and (min-width: 380px) {
+					margin-top: 12px;
+				}
+		
+				.col {
+					p.royal { font-size: 22px; margin-bottom: 8px; line-height: 28px; }
+					p:last-child { margin: 0; }
+				}
+			}
+			
+			&.row-top {
+				@media screen and (min-width: 380px) {
+					margin-top: 5px;
+				}
+			}
+			
+			button {
+				color: $light;
+				border-width: 0;
+				
+				p {
+					margin: 0;
+					height: 14px;
+				}
+				
+				&.#{$ionicons-prefix}poi, &.#{$ionicons-prefix}interrogation {
+					height: 70px;
+					font-size: 16px;
+					
+					&:before {
+						position: absolute;
+						left: 22px;
+					}
+				}
+				
+				&.#{$ionicons-prefix}poi {
+					margin-bottom: 5px;
+					
+					&:before {
+						color: $royal;
+						font-size: 26px;
+					}
+					
+					span {
+						line-height: 20px;
+						display: inherit;
+					}
+				}
+			}
+	}
+
+	.bar-footer {
+		padding: 16px 0 0;
+		height: $height-medium-footer;
+		font-size: 13px;
+		
+		.ico-sida {
+			background: url(../img/rapport/sida.png) no-repeat center left;
+			background-size: 25px;
+			padding: 12px 0 14px 35px;
+		}
+	}
+}

@@ -1,0 +1,98 @@
+<ion-view title="{{ pageTitle }}" id="detail_poi" class="page_{{ type }}" ng-controller="poiContoller">
+	<ion-header-bar class="bar">
+		<div class="row row-center {{ item.typeless }}_bg light" ng-class="{ onScrolling : scrollClass, operation_speciale_bg : item.operation }">
+			<div class="col col_left icon-left tupicon-{{ item.typeless }}"></div>
+			
+			<div class="col col_right">
+				<p class="fw_b">{{ item.nom }}</p>
+				<p id="detail_poi_type">{{ item.type }}</p>
+			</div>
+			
+			<div class="tupicon-walker bround_50p royal-bg light" ng-click="goItineraire(); trackEvents( 'fiche', 'itinéraire_' + type, item.id )"></div>
+		</div>
+	</ion-header-bar>
+	
+	<ion-content has-bouncing="false" on-scroll="scrollOnPage()" ng-class="{ onScrolling : scrollClass }">
+		<div id="poi_content">
+			<div id="poi_timewalk" class="royal fw_b">
+				<span >{{ current_timewalk }} - {{ item.distance | number:0 }}m</span>
+			</div>
+			<div id="poi_padding">
+				<div class="row row-center">
+					<div class="col col_left tupicon-poi energized"></div>
+					<div class="col col_right">
+						<span class="energized">Adresse</span><br />
+						<span>{{ item.adresse1 }}</span><span ng-if="item.adresse2"> {{ item.adresse2 }}</span><span> {{ item.codePostal }} {{ item.ville }}</span>
+					</div>
+				</div>
+				
+				<div class="row row-center" ng-if="item.telephone">
+					<div class="col col_left tupicon-phone energized"></div>
+					<div class="col col_right">
+						<span class="energized">Téléphone</span><br />
+						<span><a href="tel:{{ item.telephone }}" ng-click="trackEvents( 'fiche', 'téléphone_' + type, item.id )">{{ item.telephone }}</a></span>
+					</div>
+				</div>
+				
+				<div class="row" ng-if="horaires">
+					<div class="col col_left tupicon-clock energized"></div>
+					<div class="col col_right">
+						<span class="energized">Horaires</span><br />
+						<p ng-repeat="libelle in horaires">{{ libelle }}</p>
+					</div>
+				</div>
+				
+				<div class="row row-center" ng-if="item.preservatifgratuit">
+					<div class="col col_left tupicon-condom energized"></div>
+					<div class="col col_right">
+						<span>Les préservatifs sont distribués gratuitement.</span>
+					</div>
+				</div>
+				
+				<div class="row row-center" ng-if="item.preservatifFeminin">
+					<div class="col col_left tupicon-condomfemme energized"></div>
+					<div class="col col_right">
+						<span>Ce lieu de distribution propose des préservatifs féminins.</span>
+					</div>
+				</div>
+			</div>
+			
+			<div ng-if="item.operation" class="detail_poi_operation">
+				<div class="row row-center detail_poi_operation_title">
+					<div class="col col_left tupicon-star"></div>
+					<div class="col col_right fw_b">
+						<span>Opération {{ item.operation.nom }}</span>
+					</div>
+				</div>
+				
+				<div class="row row-center" ng-if="item.operation.image && item.operation.image != ''">
+					<div class="col">
+						<img src="http://tupdata.fr/upload/{{ item.operation.image }}" />
+					</div>
+				</div>
+				
+				<div class="row row-center" ng-if="item.operation.description">
+					<div class="col">
+						{{ item.operation.description }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+	
+	<ion-footer-bar>
+		<div class="detail_poi_footer">
+			<div class="row row-center" id="block_signal" ui-sref="app.signal_poi({id: item.id, type: type})" ng-click="trackEvents( 'fiche', 'signaler_' + type, item.id )">
+				<div class="col">
+					<p><img src="img/map/signal.png" height="25" width="25" /> Signaler un contenu manquant ou incorrect</p>
+				</div>
+			</div>
+			
+			<div class="row row-center" id="block_sida">
+				<div class="col text-center">
+					<span class="ico-sida">Sida Info Service.org /<a href="tel:0800840800" ng-click="trackEvents( 'sis' )"> 0 800 840 800</a></span>
+				</div>
+			</div>
+		</div>
+	</ion-footer-bar>
+</ion-view>

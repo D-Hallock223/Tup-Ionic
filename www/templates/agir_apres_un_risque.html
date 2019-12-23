@@ -1,0 +1,30 @@
+<ion-view title="{{ pageTitle }}" id="agirapresunrisque" ng-controller="agirApresUnRisqueController">
+	<ion-content has-bouncing="false" scroll="false" padding="true">
+		<div class="row row-center text-center">
+			<div class="col">
+				<p class="royal fw_b">Vous avez eu un rapport à risque il y a moins de 48h.</p>
+				<p>Rendez-vous dans un hôpital ou service d'urgences pour demander un Traitement Post-Exposition (TPE).</p>
+			</div>
+		</div>
+		
+		<div class="row row-top">
+			<div class="col">
+				<button class="button button-full button-stable icon icon-left tupicon-poi bround_5px fw_b" ui-sref="app.map({type: 'depistage'})" nav-direction="forward" ng-click="gaTrackEvent( 'AAR', 'tup' )">
+					<span>Trouver un lieu<br />de dépistage</span>
+				</button>
+
+				<button class="button button-full button-balanced icon-left tupicon-interrogation bround_5px fw_b" ui-sref="app.fiches_id({id: 9, cat: 4})" nav-direction="forward" ng-click="gaTrackEvent( 'AAR', 'tpe' )">
+					<span>Qu'est ce que le TPE</span>
+				</button>
+			</div>
+		</div>
+	</ion-content>
+	
+	<ion-footer-bar class="bar calm-bg">
+		<div class="row row-center">
+			<div class="col col-top text-center">
+				<span>Sida Info Service.org /<a href="tel:0800840800" ng-click="gaTrackEvent( 'AAR', 'sis' )"> 0 800 840 800</a></span>
+			</div>
+		</div>
+	</ion-footer-bar>
+</ion-view>

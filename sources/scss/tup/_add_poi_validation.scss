@@ -1,0 +1,63 @@
+#add_poi_validation {
+	$padding-horizontal : 17px;
+	p { margin: 0; }
+	
+	.scroll-content {
+		background: $calm;
+	}
+	
+	.bar-header {
+		height: $height-medium-plus-footer;
+	}
+	
+	#add_poi_validation_btns {
+		padding: $detail_poi_padding_left;
+		background: $light;
+		margin-top: 50px;
+		
+		#add_poi_validation_confirm_btn, #add_poi_validation_change_btn {
+			width: 95%;
+			border: none;
+			padding: 14px 0;
+			margin: 0;
+		}
+		
+		#add_poi_validation_confirm_btn {
+			background: $royal;
+		}
+		
+		#add_poi_validation_change_btn {
+			background: $color-gris-7;
+		}
+	}
+	
+	#add_distribution_content {
+		position: relative;
+		top: $height-medium-plus-footer;
+	}
+	
+	#poi_padding {
+		padding: 0 $detail_poi_padding_left;
+		
+		.row {
+			padding-top: 30px;
+		}
+	
+	}
+	
+	#add_poi_validation_type {
+		height: 28px;
+        width: 28px;
+	}
+
+	[class*="#{$ionicons-prefix}"] {
+		font-size: 20px;
+	}
+	
+	.col_left {
+		width: 35px;
+		max-width: 35px;
+        height: 35px;
+        margin-right: 12px;
+	}
+}

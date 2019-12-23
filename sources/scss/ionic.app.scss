@@ -1,0 +1,28 @@
+// Override sass
+$light:			#fff !default;		// Blanc
+$stable:		#e95200 !default;	// Orange
+$positive:		#e80085 !default;	// Rose
+$calm:			#f7f7f7 !default;	// Gris clair
+$balanced:		#ccc !default;		// Gris moyen
+$energized:		#8e8e8e !default;	// Gris fonce
+$assertive:		#3ac7e8 !default;	// Bleu
+$royal:			#5b0e6f !default;	// Violet
+$dark:			#000 !default;		// Noir
+
+$loading-bg-color : $light !default
+$loading-text-color : $dark !default;
+$loading-padding : 35px 10%;
+
+$bar-height:	41px !default;
+$input-color-placeholder: $energized !default;
+
+@font-face {
+font-family: "Helvetica Neue";
+src: url("../fonts/HelveticaNeue.ttf") format("opentype");   
+}
+
+// Include all of Ionic
+@import "./ionic/ionic";
+
+// Include all of Tup
+@import "./tup/tup";

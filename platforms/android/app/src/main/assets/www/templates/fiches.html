@@ -1,0 +1,144 @@
+<ion-view title="{{ pageTitle }}" id="fiches" ng-controller="fichesContoller" cache-view="false">
+	<ion-content has-bouncing="false" scroll="false">
+		<!-- preservatif_masculin_et_feminin -->
+		<div class="row row-center first_item light" id="row_double_icon" ng-click="setCat( obj.categories[0].key, 1 ); gaTrackEvent( 'FP', 'preservatifs' )" style="height: {{ obj.heightTitle }}%; top: {{ ( display != 'item' ) ? 0 : ( currentCatIndex == 1 ) ? 0 : -10 * ( currentCatIndex - 1 ) }}%;">
+			<div class="col col_icon text-center">
+				<span ng-bind-html="obj.categories[0].tupicon"></span>
+			</div>
+			<div class="col col_title">
+				<span>{{ obj.categories[0].title }}</span>
+			</div>
+		</div>
+		
+		<ion-scroll has-bouncing="{{ ( display == 'item' ) ? false : true }}" class="second_item" class="second_item" style="top: {{ ( display != 'item' ) ? 10 : ( currentCatIndex == 1 ) ? 10 : -50 * ( currentCatIndex - 1 ) }}%;">
+			<div ng-repeat="fiche in obj.categories[0].fiches" class="row row-center" ng-click="setItem( $index, $event )" style="{{ ( display == 'item' && currentCatIndex == 1 && currentItemIndex != $index ) ? 'display: none;' : 'height: 20%;' }}">
+				<div class="col col-90">
+					<span>{{ fiche.nom }}</span>
+				</div>
+				<div class="col col-10 text-right">
+					<i class="tupicon-chevron_down"></i>
+				</div>
+			</div>
+		</ion-scroll>
+		
+		<!-- depistage -->
+		<div class="row row-center first_item light" id="row_double_icon" ng-click="setCat( obj.categories[1].key, 2 ); gaTrackEvent( 'FP', 'depistage' )" style="height: {{ obj.heightTitle }}%; top: {{ ( display != 'item' ) ? ( ( currentCatIndex == 1 ) ? 60 : obj.heightTitle ) : ( ( currentCatIndex == 2 ) ? 0 : ( ( currentCatIndex < 2 ) ? 100 : -10 * ( currentCatIndex - 2 ) ) ) }}%;">
+			<div class="col col_icon text-center">
+				<span ng-bind-html="obj.categories[1].tupicon"></span>
+			</div>
+			<div class="col col_title">
+				<span>{{ obj.categories[1].title }}</span>
+			</div>
+		</div>
+		
+		<ion-scroll has-bouncing="{{ ( display == 'item' ) ? false : true }}" class="second_item" style="top: {{ ( display != 'item' ) ? ( ( currentCatIndex && currentCatIndex < 2 ) ? 70 : ( obj.heightTitle * 1 ) + 10 ) : ( ( currentCatIndex == 2 ) ? 10 : ( ( currentCatIndex < 2 ) ? 110 : -50 * ( currentCatIndex - 2 ) ) ) }}%;">
+			<div ng-repeat="fiche in obj.categories[1].fiches" class="row row-center" ng-click="setItem( $index, $event )" style="{{ ( display == 'item' && currentCatIndex == 2 && currentItemIndex != $index ) ? 'display: none;' : 'height: 20%;' }}">
+				<div class="col col-90">
+					<span>{{ fiche.nom }}</span>
+				</div>
+				<div class="col col-10 text-right">
+					<i class="tupicon-chevron_down"></i>
+				</div>
+			</div>
+		</ion-scroll>
+		
+		<!-- contraception_et_vaccins -->
+		<div class="row row-center first_item light" id="row_double_icon" ng-click="setCat( obj.categories[2].key, 3 ); gaTrackEvent( 'FP', 'cv' )" style="height: {{ obj.heightTitle }}%; top: {{ ( display != 'item' ) ? ( ( currentCatIndex && currentCatIndex < 3 ) ? 70 : obj.heightTitle * 2 ) : ( ( currentCatIndex == 3 ) ? 0 : ( ( currentCatIndex < 3 ) ? 100 + 10 * ( 2 - currentCatIndex ) : -10 * ( currentCatIndex - 3 ) ) ) }}%">
+			<div class="col col_icon text-center">
+				<span ng-bind-html="obj.categories[2].tupicon"></span>
+			</div>
+			<div class="col col_title">
+				<span>{{ obj.categories[2].title }}</span>
+			</div>
+		</div>
+		
+		<ion-scroll has-bouncing="{{ ( display == 'item' ) ? false : true }}" class="second_item" style="top: {{ ( display != 'item' ) ? ( ( currentCatIndex && currentCatIndex < 3 ) ? 80 : ( obj.heightTitle * 2 ) + 10 ) : ( ( currentCatIndex == 3 ) ? 10 : ( ( currentCatIndex < 3 ) ? 110 + 10 * ( 2 - currentCatIndex ) : -50 * ( currentCatIndex - 3 ) ) ) }}%">
+			<div ng-repeat="fiche in obj.categories[2].fiches" class="row row-center" ng-click="setItem( $index, $event )" style="{{ ( display == 'item' && currentCatIndex == 3 && currentItemIndex != $index ) ? 'display: none;' : 'height: 20%;' }}">
+				<div class="col col-90">
+					<span>{{ fiche.nom }}</span>
+				</div>
+				<div class="col col-10 text-right">
+					<i class="tupicon-chevron_down"></i>
+				</div>
+			</div>
+		</ion-scroll>
+		
+		<!-- tpe_traitement_post_exposition -->
+		<div class="row row-center first_item light" id="row_double_icon" ng-click="setCat( obj.categories[3].key, 4 ); gaTrackEvent( 'FP', 'TPE' )" style="height: {{ obj.heightTitle }}%; top: {{ ( display != 'item' ) ? ( ( currentCatIndex && currentCatIndex < 4 ) ? 80 : obj.heightTitle * 3 ) : ( ( currentCatIndex == 4 ) ? 0 : ( ( currentCatIndex < 4 ) ? 100 + 10 * ( 3 - currentCatIndex ) : -10 * ( currentCatIndex - 4 ) ) ) }}%">
+			<div class="col col_icon text-center">
+				<span ng-bind-html="obj.categories[3].tupicon"></span>
+			</div>
+			<div class="col col_title">
+				<span>{{ obj.categories[3].title }}</span>
+			</div>
+		</div>
+		
+		<ion-scroll has-bouncing="{{ ( display == 'item' ) ? false : true }}" class="second_item" style="top: {{ ( display != 'item' ) ? ( ( currentCatIndex && currentCatIndex < 4 ) ? 90 : ( obj.heightTitle * 3 ) + 10 ) : ( ( currentCatIndex == 4 ) ? 10 : ( ( currentCatIndex < 4 ) ? 110 + 10 * ( 3 - currentCatIndex ) : -50 * ( currentCatIndex - 4 ) ) ) }}%">
+			<div ng-repeat="fiche in obj.categories[3].fiches" class="row row-center" ng-click="setItem( $index, $event )" style="{{ ( display == 'item' && currentCatIndex == 4 && currentItemIndex != $index ) ? 'display: none;' : 'height: 20%;' }}">
+				<div class="col col-90">
+					<span>{{ fiche.nom }}</span>
+				</div>
+				<div class="col col-10 text-right">
+					<i class="tupicon-chevron_down"></i>
+				</div>
+			</div>
+		</ion-scroll>
+		
+		<!-- ist_infections_sexuellement_transmissibles -->
+		<div class="row row-center first_item light" id="row_double_icon" ng-click="setCat( obj.categories[4].key, 5 ); gaTrackEvent( 'FP', 'IST' )" style="height: {{ obj.heightTitle }}%; top: {{ ( display != 'item' ) ? ( ( currentCatIndex && currentCatIndex < 5 ) ? 90 : obj.heightTitle * 4 ) : ( ( currentCatIndex == 5 ) ? 0 : 100 + 10 * ( 4 - currentCatIndex ) ) }}%">
+			<div class="col col_icon text-center">
+				<span ng-bind-html="obj.categories[4].tupicon"></span>
+			</div>
+			<div class="col col_title">
+				<span>{{ obj.categories[4].title }}</span>
+			</div>
+		</div>
+		
+		<ion-scroll has-bouncing="{{ ( display == 'item' ) ? false : true }}" class="second_item" style="top: {{ ( display != 'item' ) ? ( ( currentCatIndex && currentCatIndex < 5 ) ? 100 : ( obj.heightTitle * 4 ) + 10 ) : ( ( currentCatIndex == 5 ) ? 10 : 110 + 10 * ( 4 - currentCatIndex ) ) }}%">
+			<div ng-repeat="fiche in obj.categories[4].fiches" class="row row-center" ng-click="setItem( $index, $event )" style="{{ ( display == 'item' && currentCatIndex == 5 && currentItemIndex != $index ) ? 'display: none;' : 'height: 20%;' }}">
+				<div class="col col-90">
+					<span>{{ fiche.nom }}</span>
+				</div>
+				<div class="col col-10 text-right">
+					<i class="tupicon-chevron_down"></i>
+				</div>
+			</div>
+		</ion-scroll>
+		
+		<div id="fiches_slider" ng-class="{ activated : isOnSlide }">
+			<div ng-repeat="cat in obj.categories" ng-init="catIndex = $index" class="fiches_slider_cat" style="right:{{ ( 100 * currentCatIndex ) - ( 100 * ( catIndex + 1 ) ) }}%">
+				<div class="row row-center first_item light" id="{{ ( catIndex == 0 ) ? 'row_double_icon' : 'fake_id_' + catIndex }}" ng-show="isOnSlide" ng-click="setCat( cat.key, catIndex )" on-swipe="onCatSwipe( $event )">
+					<div class="col col_icon text-center">
+						<span ng-bind-html="cat.tupicon"></span>
+					</div>
+					<div class="col col_title">
+						<span>{{ cat.title }}</span>
+					</div>
+				</div>
+				
+				<div ng-repeat="fiche in cat.fiches" class="fiches_slider_item" ng-init="itemIndex = $index" style="right: {{ ( 100 * currentItemIndex ) - ( 100 * itemIndex ) }}%;" on-swipe="onItemSwipe( $event )" ng-show="currentCatIndex == ( catIndex + 1 )">
+					<div class="row row-center fiches_slider_item_title">
+						<div class="col col-90">
+							<span>{{ fiche.nom }}</span>
+						</div>
+						<div style="height: 100%; padding-top: 5%;" class="col col-10 text-right" ng-click="setCat( cat.key, catIndex ); gaTrackEvent( 'FP', currentCat, 'close_' + fiche.nom )">
+							<i class="tupicon-close"></i>
+						</div>
+					</div>
+					
+					<ion-scroll has-bouncing="true">
+						<img ng-if="fiche.image && fiche.image != ''" src="http://tupdata.fr/upload/{{ fiche.image }}" />
+						<div ng-bind-html="fiche.description" class="fiches_slider_item_description"></div>
+					</ion-scroll>
+				</div>
+				
+				<div class="row row-center fiches_slider_pagin" on-swipe="onItemSwipe( $event )">
+					<div class="col text-center">
+						<span ng-repeat="fiche in cat.fiches" ng-init="itemIndex = $index"><i class="ion-record" ng-class="{ activate : currentItemIndex == itemIndex }"></i></span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</ion-content>
+</ion-view>

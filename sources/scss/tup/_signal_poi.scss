@@ -1,0 +1,112 @@
+#signal_poi {
+	p, .item { margin: 0; padding: 0; }
+	
+	.bar-header {
+		background-color: $calm;
+		height: $height-medium-plus-footer;
+	}
+	
+	#signal_poi_content, #signal_poi_content span {
+		font-size: 13px;
+	}
+	
+	#signal_poi_content {
+		position: relative;
+		top: $height-medium-plus-footer;
+	}
+	
+	.col_left {
+		width: 50px;
+		max-width: 50px;
+	}
+	
+	#signal_poi_type {
+		padding: 19px 0 17px;
+		border-bottom: 1px solid $color-gris-1;
+	
+		.bround_50p {
+			font-size: 12px;
+			padding: 6px 7px;
+			
+			&:before {
+				position: relative;
+				top: 1px;
+			}
+		}
+		
+		.col_right {
+			line-height: 14px;
+		}
+	}
+	
+	#signal_poi_items {
+		[class*="#{$ionicons-prefix}"] {
+			&:before {
+				font-size: 20px;
+			}
+		}
+		
+		.active {
+			color: $light;
+			background: $royal;
+			
+			[class*="#{$ionicons-prefix}"], span {
+				color: $light;
+			}
+		}
+		
+		.activated {
+			background: darken($royal, 1%);
+		}
+	}
+
+	
+	.list {
+		padding: 0;
+		margin: 0;
+		
+		.item {
+			padding: 9px 0;
+			border-width: 0;
+			border-bottom: 1px solid $color-gris-1;
+		}
+		
+		[class*="#{$ionicons-prefix}"] {
+			font-size: 18px;
+			color: $energized;
+		}
+	}
+	
+	#signal_poi_note {
+		padding: 0 17px;
+		margin-top: 26px;
+		
+		.item {
+			padding: 8px 0;
+			
+			&.btnone {
+				border: none;
+			}
+		}
+		
+		span {
+			padding: 0;
+		}
+	}
+	
+	#signal_poi_btn {
+		margin-bottom: 30px;
+		padding-top: 30px;
+		border-top: 1px solid $energized;
+		
+		.col {
+			padding: 0 40px;
+		}
+		
+		button {
+			border: none;
+			padding: 9px 0;
+			background-color: $royal;
+		}
+	}
+}

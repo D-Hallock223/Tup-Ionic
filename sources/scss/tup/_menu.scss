@@ -1,0 +1,102 @@
+// Headers buttons
+.bar.nav-bar-container {
+	border: none;
+	.button.#{$ionicons-prefix}navicon:before {
+		font-size: 17px;
+		line-height: 28px;
+	}
+}
+
+.modal-backdrop-bg {
+	background-color: rgba( 0, 0, 0, .5);
+}
+
+.btnToggleMenu.#{$ionicons-prefix}chevron_right {
+	z-index: 20;
+	color: $light;
+	position: absolute;
+	left: 13px;
+	top: 9px;
+	
+	&:before {
+		font-size: 23px;
+		line-height: 28px;
+	}
+}
+
+// Menu
+.borderDropBox {
+	.menu {
+		top: 20px;
+	}
+	
+	.btnToggleMenu.tupicon-chevron_right {
+		top: 29px;
+	}
+}
+
+.menu {
+	top: 0;
+	bottom: 0;
+	z-index: 15 !important;
+	@include translate3d( 100%, 0, 0);
+	
+	.has-header {
+		top: 0;
+	}
+
+	.item-complex {
+		border-color: $color-gris-1;
+		
+		.item-content {
+			padding: 11px 0 12px 63px;
+			
+			[class*="#{$ionicons-prefix}"] {
+				font-size: 27px;
+				padding-left: 6px;
+				
+				.menu-label {
+					font-size: 16px;
+					padding-left: 10px;
+					color: $dark;
+				}
+			}
+			
+			.#{$ionicons-prefix}home { color: $color-gris-2; }
+			.#{$ionicons-prefix}poi { color: $royal; }
+			.#{$ionicons-prefix}plus { color: $stable; }
+			.#{$ionicons-prefix}bubbles_right { color: $assertive; }
+			.#{$ionicons-prefix}agenda3 { color: $positive; }
+			.#{$ionicons-prefix}condom { color: $royal; }
+		}
+	}
+	
+	#share_menu {
+		position: absolute;
+		bottom: 0;
+		height: 122px;
+		width: 100%;
+		text-align: center;
+		font-size: 16px;
+		
+		p {
+			margin-bottom: 5px;
+		}
+		
+		.row {
+			padding: 5px 12px 0;
+		}
+	}
+}
+
+.menu-open {
+	.menu-content.pane {
+		transform: translate3d( 0, 0, 0) !important;
+	}
+	
+	.menu {
+		width: -webkit-calc( 100% - 50px ) !important;
+		width: calc( 100% - 50px ) !important;
+	}
+}
+

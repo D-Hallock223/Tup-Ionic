@@ -1,0 +1,50 @@
+<ion-view title="{{ pageTitle }}" id="signal_poi" ng-controller="signalPoiContoller">
+	<ion-content has-bouncing="false" ng-show="!valid">
+		<ion-header-bar class="bar">
+			<div class="row row-center dark text-center fw_b">
+				<div style="padding-bottom: 20px;" class="col">
+					Compléter ou corriger un contenu
+				</div>
+			</div>
+		</ion-header-bar>
+
+		<div id="signal_poi_content">
+			<div class="row row-center" id="signal_poi_type">
+				<div class="col col_left text-center">
+					<i class="tupicon-{{ place.typeless }} {{ place.typeless }}_bg text-center light bround_50p"></i>
+				</div>
+				<div class="col_right">
+					<p style="text-overflow: ellipsis;overflow: hidden;">{{ place.nom }}</p>
+					<p>{{ place.type }}</p>
+				</div>
+			</div>
+
+			<div class="list" id="signal_poi_items">
+				<div class="item" ng-repeat="item in items" ng-click="clicked( item ); trackEvents( 'signal', item.ga )" ng-class="{ active: item.active }">
+					<div class="row row-center">
+						<div class="col col_left tupicon-{{ item.icon }} text-center energized"></div>
+						<div class="col_right">
+							<span class="dark">{{ item.name }}</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="list" id="signal_poi_note">
+				<label class="item item-input" id="signal_poi_notes">
+					<span class="input-label fw_b">Notes</span>
+				</label>
+				
+				<label class="item item-input btnone">
+					<textarea rows="3" placeholder="Précisez les informations à modifier." ng-model="note" ng-click="trackEvents( 'signal', 'note' )"></textarea>
+				</label>
+			</div>
+			
+			<div class="row" id="signal_poi_btn">
+				<div class="col">
+					<button class="button button-full light bround_5px" ng-click="submitPoi(); trackEvents( 'signal', 'valider' )">VALIDER</button>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

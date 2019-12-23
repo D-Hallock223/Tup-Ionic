@@ -1,0 +1,316 @@
+#splash {
+	z-index: 999999;
+	background: url(../img/splashscreen/TUP_title.svg) no-repeat center 16.5%, 
+				url(../img/splashscreen/TUP_SPLASHscreen5.jpg) no-repeat center center;
+	-webkit-background-size: 45% 30%, cover;
+    -moz-background-size: 45% 30%, cover;
+    background-size: 45% 30%, cover;
+    -o-background-size: 45% 30%, cover;
+}
+
+.footer_splashscreen {
+	z-index: 999;
+	position: absolute;
+	background-image: url(../img/splashscreen/splash_footer.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: contain;
+	margin-left: 10%;
+	width: 80%;
+	height: 98%;
+	margin-bottom: 20%;
+}
+	
+@media screen and (min-aspect-ratio: 3/4) {
+	.footer_splashscreen {
+		z-index: 999;
+		position: absolute;
+		background-image: url(../img/splashscreen/splash_footer.png);
+		background-repeat: no-repeat;
+		background-position: center bottom;
+		background-size: contain;
+		width: 100%;
+		height: 20%;
+		margin-left: 0%;
+		margin-bottom: 5%;
+		bottom: 0;
+	}
+}
+
+.nuage1 {
+    z-index: 998;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(../img/splashscreen/nuage1.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.nuage2  {
+	z-index: 996;
+	background: url(../img/splashscreen/nuage2.png) no-repeat center center;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+.main1 {
+	z-index: 995;
+	background: url(../img/splashscreen/main1.svg) no-repeat center center;
+	width: 45%;
+	height: 45%;
+	position: absolute;
+	left:-8%; 
+	top:70%;
+	
+    -moz-animation-name: main1animation;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);
+    -moz-animation-duration: 2s;
+	-moz-animation-fill-mode: forwards;
+	-moz-animation-delay: 1s;
+
+    -webkit-animation-name: main1animation;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);
+    -webkit-animation-duration: 2s;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-delay: 1s;
+
+    animation-name: main1animation;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);
+    animation-duration: 2s;
+	animation-fill-mode: forwards;
+	animation-delay: 1s;
+}
+	
+@-moz-keyframes main1animation {
+    0% { -moz-transform: translate3d(0%, 0%, 0); }
+    100% { -moz-transform: translate3d(45%, -85%, 0); }
+}
+@-webkit-keyframes main1animation {
+    0% { -webkit-transform: translate3d(0%, 0%, 0); }
+    100% { -webkit-transform: translate3d(45%, -85%, 0); }
+}
+@keyframes main1animation {
+    0% { transform: translate3d(0%, 0%, 0); }
+    100% { transform: translate3d(45%, -85%, 0); }
+}
+
+.main2 {
+	z-index: 997;
+	background: url(../img/splashscreen/main2.svg) no-repeat center center;
+	width: 32%;
+	height: 32%;
+	position: absolute;
+	left:52%; top:70%;
+	
+    -moz-animation-name: main2animation;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);
+    -moz-animation-duration: 1.6s;
+	-moz-animation-fill-mode: forwards;
+	-moz-animation-delay: 1.7s;
+
+    -webkit-animation-name: main2animation;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);
+    -webkit-animation-duration: 1.6s;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-delay: 1.7s;
+
+    animation-name: main2animation;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);
+    animation-duration: 1.6s;
+	animation-fill-mode: forwards;
+	animation-delay: 1.7s;
+}
+
+@-moz-keyframes main2animation {
+    0% { -moz-transform: translate3d(0%, 0%, 0); }
+    100% { -moz-transform: translate3d(-29%, -75%, 0); }
+}
+@-webkit-keyframes main2animation {
+    0% { -webkit-transform: translate3d(0%, 0%, 0); }
+    100% { -webkit-transform: translate3d(-29%, -75%, 0); }
+}
+@keyframes main2animation {
+    0% { transform: translate3d(0%, 0%, 0); }
+    100% { transform: translate3d(-29%, -75%, 0); }
+}
+
+.main3 {
+	z-index: 994;
+	background: url(../img/splashscreen/main3.svg) no-repeat center center;
+	width: 49%;
+	height: 49%;
+	position: absolute;
+	left:80%; top:70%;
+		
+    -moz-animation-name: main3animation;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);
+    -moz-animation-duration: 1.6s;
+	-moz-animation-fill-mode: forwards;
+	-moz-animation-delay: 1.7s;
+
+    -webkit-animation-name: main3animation;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);
+    -webkit-animation-duration: 1.6s;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-delay: 1.7s;
+
+    animation-name: main3animation;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);
+    animation-duration: 1.6s;
+	animation-fill-mode: forwards;
+	animation-delay: 1.7s;
+}
+
+@-moz-keyframes main3animation {
+    0% { -moz-transform: translate3d(0%, 0%, 0); }
+    100% { -moz-transform: translate3d(-75%, -83%, 0); }
+}
+@-webkit-keyframes main3animation {
+    0% { -webkit-transform: translate3d(0%, 0%, 0); }
+    100% { -webkit-transform: translate3d(-75%, -83%, 0); }
+}
+@keyframes main3animation {
+    0% { transform: translate3d(0%, 0%, 0); }
+    100% { transform: translate3d(-75%, -83%, 0); }
+}
+
+.main4 {
+	z-index: 993;
+	background: url(../img/splashscreen/main4.svg) no-repeat center center;
+	width: 33%;
+	height: 33%;
+	position: absolute;
+	left:-20%; top:70%;	
+    -moz-animation-name: main4animation;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);
+    -moz-animation-duration: 1.6s;
+	-moz-animation-fill-mode: forwards;
+	-moz-animation-delay: 1.7s;
+
+    -webkit-animation-name: main4animation;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);
+    -webkit-animation-duration: 1.6s;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-delay: 1.7s;
+
+    animation-name: main4animation;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);
+    animation-duration: 1.6s;
+	animation-fill-mode: forwards;
+	animation-delay: 1.7s;
+}
+
+@-moz-keyframes main4animation {
+    0% { -moz-transform: translate3d(0%, 0%, 0); }
+    100% { -moz-transform: translate3d(65%, -95%, 0); }
+}
+@-webkit-keyframes main4animation {
+    0% { -webkit-transform: translate3d(0%, 0%, 0); }
+    100% { -webkit-transform: translate3d(65%, -95%, 0); }
+}
+@keyframes main4animation {
+    0% { transform: translate3d(0%, 0%, 0); }
+    100% { transform: translate3d(65%, -95%, 0); }
+}
+
+.main5 {
+	z-index: 993;
+	background: url(../img/splashscreen/main5.svg) no-repeat center center;
+	width: 36%;
+	height: 36%;
+	position: absolute;
+	left: 25%; top:70%;
+    -moz-animation-name: main5animation;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);
+    -moz-animation-duration: 1.5s;
+	-moz-animation-fill-mode: forwards;
+	-moz-animation-delay: 1.5s;
+
+    -webkit-animation-name: main5animation;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);
+    -webkit-animation-duration: 1.5s;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-delay: 1.5s;
+
+    animation-name: main5animation;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);
+    animation-duration: 1.5s;
+	animation-fill-mode: forwards;
+	animation-delay: 1.5s;
+}
+
+@-moz-keyframes main5animation {
+    0% { -moz-transform: translate3d(0%, 0%, 0); }
+    100% { -moz-transform: translate3d(5%, -76%, 0);  }
+}
+@-webkit-keyframes main5animation {
+    0% { -webkit-transform: translate3d(0%, 0%, 0); }
+    100% { -webkit-transform: translate3d(5%, -76%, 0);  }
+}
+@keyframes main5animation {
+    0% { transform: translate3d(0%, 0%, 0); }
+    100% { transform: translate3d(5%, -76%, 0); }
+}
+
+.main6 {
+	z-index: 997;
+	background: url(../img/splashscreen/main6.svg) no-repeat center center;
+	width: 33%;
+	height: 33%;
+	position: absolute;
+	left:80%; top:60%;
+    -moz-animation-name: main6animation;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);
+    -moz-animation-duration: 1.6s;
+	-moz-animation-fill-mode: forwards;
+	-moz-animation-delay: 1.7s;
+
+    -webkit-animation-name: main6animation;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);
+    -webkit-animation-duration: 1.6s;
+	-webkit-animation-fill-mode: forwards;
+	-webkit-animation-delay: 1.7s;
+
+    animation-name: main6animation;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(0.36, 0.66, 0.04, 1);
+    animation-duration: 1.6s;
+	animation-fill-mode: forwards;
+	animation-delay: 1.7s;
+}
+
+@-moz-keyframes main6animation {
+    0% { -moz-transform: translate3d(0%, 0%, 0); }
+    100% { -moz-transform: translate3d(-46%, -78%, 0); }
+}
+@-webkit-keyframes main6animation {
+    0% { -webkit-transform: translate3d(0%, 0%, 0); }
+    100% { -webkit-transform: translate3d(-46%, -78%, 0); }
+}
+@keyframes main6animation {
+    0% { transform: translate3d(0%, 0%, 0); }
+    100% { transform: translate3d(-46%, -78%, 0); }
+}

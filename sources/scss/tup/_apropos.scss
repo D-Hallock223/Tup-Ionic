@@ -1,0 +1,68 @@
+#apropos {
+	img { max-width: 50%; margin: 25px 0; }
+	text-align: justify;
+	line-height: 18px;
+	
+	p.text-center { margin: 0; }
+	
+	a {
+		background: $color-gris-7;
+		padding: 20px 0;
+		text-align: center;
+		display: block;
+		color: $light;
+		margin-bottom: 16px;
+	}
+	
+	#apropos_title {
+		height: $height-medium-plus-footer;
+		background: $calm;
+		font-size: 1.2em;
+		margin-bottom: 30px;
+	}
+	
+	.little_header {
+		height: $height-medium-plus-footer;
+		background: $calm;
+	}
+	.little_header.first {
+		margin-top: 25px;
+	}
+	.borderbottom {
+		border-bottom: 1px solid #8e8e8e;
+	}
+
+	.padding {
+		padding: 0 18px;
+		
+		&.border_bgf {
+			padding-bottom: 20px;
+			border-bottom: 1px solid $energized;
+			margin-bottom: 30px;
+		}
+		
+		.border_bgc {
+			border-bottom: 1px solid #cccbd0;
+		}
+	}
+		
+	.animate-show {
+		height: 100%;
+		opacity: 1;
+		padding: 10px;
+	}
+	
+	.animate-show.ng-hide-add, .animate-show.ng-hide-remove {
+		transition: all linear 0.2s;
+	}
+	
+	.animate-show.ng-hide {
+		height: 0;
+		opacity: 0;
+		padding: 0 10px;
+	}
+	
+	.check-element {
+		padding: 10px;
+	}	
+}

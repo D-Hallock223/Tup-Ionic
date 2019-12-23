@@ -1,0 +1,185 @@
+#add_distribution {
+	$padding-horizontal : 17px;
+	$color_error : #f00;
+	
+	.bar-header {
+		height: $height-medium-plus-footer;
+	}
+	
+	.input-label, input {
+		padding: 0;
+	}
+	
+	input.input_time {
+		padding-top: 8px;
+	}
+	
+	input.fieldError::-webkit-input-placeholder {
+		color: $color_error;
+	}
+	
+	.fieldError {
+		color: $color_error;
+	}
+	
+	#add_distribution_content {
+		position: relative;
+		top: $height-medium-plus-footer + 34px;
+	}
+	
+	#add_distribution_type {
+		.list {
+			margin: 0 0 13px 0;
+			padding: 0;
+		}
+		
+		.item {
+			border-width: 0;
+			margin: 0;
+			border-bottom: 1px solid $color-gris-1;
+			padding: 5px $padding-horizontal;
+			
+			.col-ico {
+				max-width: 27px;
+				width: 27px;
+				height: 27px;
+				margin-right: 12px;
+			}
+			
+			.col-more {
+				color: $color-gris-1;
+				font-size: 12px;
+			}
+		}
+	}
+	
+	label {
+		margin: 0;
+		border-width: 0;
+		
+		&.border_b {
+			border-bottom: 1px solid $color-gris-1;
+		}
+	}
+	
+	#adc_nom {
+		label {
+			padding: 13px 0;
+		}
+	}
+	
+	#adc_adresse {
+		label {
+			padding: 6px 0;
+		}
+	}
+	
+	#adc_tel {
+		label {
+			padding: 10px 0;
+		}
+	}
+	
+	#adc_horaires {
+		label {
+			padding: 10px 0;
+		}
+	}
+	
+	#adc_info {
+		padding-bottom: 10px;
+		border-bottom: 1px solid $color-gris-1;
+		
+		.text-right {
+			font-style: italic;
+			font-size: .8em;
+		}
+	}
+	
+	#adc_tel, #adc_adresse, #adc_nom {
+		border-bottom: 1px solid $energized;
+	}
+	
+	.#{$ionicons-prefix}poi, .#{$ionicons-prefix}phone, .#{$ionicons-prefix}clock {
+		&:before {
+			font-size: 19px;
+			color: $dark;
+		}
+	}
+	
+	.icon-left {
+		&:before {
+			margin-right: 6px;
+		}
+	}
+	
+	.add_distribution_horaires.first_horaires {
+			margin-top: 14px;
+	}
+	
+	.add_distribution_horaires {
+		padding: 5px 0;
+		margin-bottom: 15px;
+		margin-top: 32px;
+		
+		.col {
+			.btn_jour:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	
+	.btn_jour {
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		font-size: 12px;
+		padding-top: 4px;
+		color: $energized;
+		background-color: $calm;
+		border: 1px solid $color-gris-5;
+		text-align: center;
+		margin-right: -webkit-calc( ( 100% - 210px - 17px - 17px ) / 6 );
+		margin-right: calc( ( 100% - 210px - 17px - 17px ) / 6 );
+		
+		&.selected {
+			color: $light;
+			background-color: $royal;
+			border: 1px solid $royal;
+		}
+	}
+	
+	.addpoi_days_secondline .item {
+		color: $color-gris-7;
+	}
+	
+	.bortl {
+		border-top: 1px solid $color-gris-1;
+	}
+	
+	.borbl {
+		border-bottom: 1px solid $color-gris-1;
+		margin: 0;
+	}
+	
+	.borll {
+		border-left: 1px solid $color-gris-1;
+		padding-left: 16px;
+	}
+	
+	.padding {
+		padding: 0 $padding-horizontal;
+	}
+	
+	#btn_valid {
+		margin-top: 40px;
+		padding: 0 40px;
+		
+		button.button {
+			color: $light;
+			background-color: $royal;
+			border: none;
+			padding: 9px 0;
+		}
+	}
+}

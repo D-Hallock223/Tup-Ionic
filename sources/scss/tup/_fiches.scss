@@ -1,0 +1,163 @@
+#fiches {
+	img { max-width: 100%; }
+
+	.row+.row {
+		margin: 0;
+	}
+	
+	.first_item, .second_item, .second_item .row, .fiches_slider_cat, .fiches_slider_item  {
+		transition: 0.3s linear all;
+	}
+	
+	.first_item {
+		z-index: 3;
+		background: #4fc0e1;
+		font-size: 1.2em;
+		border-bottom: 1px solid #378799;
+		padding: 0;
+		position: absolute;
+		
+		&#row_double_icon {
+			.#{$ionicons-prefix}condom:before {
+				left: -2px;
+			}
+			
+			.#{$ionicons-prefix}condomfemme:before {
+				left: 4px;
+			}
+		}
+		
+		.col_icon {
+			width: 19%;
+			max-width: 19%;
+		}
+		
+		[class*="#{$ionicons-prefix}"] {
+			font-size: 26px;
+
+			&:before {
+				position: relative;
+				top: 2px;
+			}
+		}
+		
+		.#{$ionicons-prefix}contraception:before {
+			-webkit-transform: rotate( 45deg );
+			transform: rotate( 45deg );
+		}
+	}
+	
+	.second_item {
+		margin: 0;
+		height: 50%;
+		position: absolute;
+		width: 100%;
+		z-index: 2;
+		background: $light;
+		
+		.scroll {
+			height: 100%;
+			
+			.row {
+				padding: 0 5%;
+				border-bottom: 1px solid $color-gris-1;
+				color: $dark;
+				
+				.#{$ionicons-prefix}chevron_down {
+					color: $color-gris-1;
+				}
+			}
+		}
+	}
+	
+	#fiches_slider {
+		z-index: 1;
+		display: none;
+		
+		&.activated {
+			z-index: 5;
+			display: block;
+			
+			.fiches_slider_cat {
+				z-index: 5;
+			}
+			
+			.first_item {
+				z-index: 5;
+			}
+			
+			.fiches_slider_item {
+				z-index: 5;
+				
+				.fiches_slider_item_title {
+					z-index: 5;
+				}
+			}
+		}
+		
+		.fiches_slider_cat {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+		}
+		
+		.first_item {
+			top: 0;
+			height: 9.8%;
+			z-index: 1;
+		}
+		
+		.fiches_slider_item {
+			position: absolute;
+			top: 9.8%;
+			height: 80%;
+			width: 100%;
+			z-index: 1;
+			
+			.fiches_slider_item_title {
+				height: 12.5%;
+				width: 100%;
+				z-index: 50;
+				padding: 0 5%;
+				border-bottom: 1px solid #c7c7cc;
+				background: $light;
+				z-index: 1;
+				
+				.#{$ionicons-prefix}close {
+					color: $color-gris-1;
+				}
+			}
+			
+			.fiches_slider_item_description {
+				text-align: justify;
+			}
+
+			.scroll-view {
+				height: 87.5%;
+				background: $light;
+				margin: 0;
+				
+				.scroll {
+					height: 100%;
+					padding: 5%;
+				}
+			}
+		}
+		
+		.fiches_slider_pagin {
+			position: absolute;
+			bottom: 0;
+			height: 10%;
+			border-top: 1px solid $color-gris-1;
+			background: $light;
+			
+			.ion-record {
+				color: $color-gris-1;
+				
+				&.activate {
+					color: $royal;
+				}
+			}
+		}
+	}
+}

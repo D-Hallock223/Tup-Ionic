@@ -1,0 +1,59 @@
+<div class="btnToggleMenu tupicon-chevron_right" ng-click="sideMenu.toggle()" ng-show="isMenuOpener"></div>
+<div class="menu menu-right" on-swipe="onSideMenuSwipe($event)">
+	<ion-content scroll="false">
+		<ion-list>
+			<ion-item class="item-icon-left" ui-sref="app.home" ng-click="sideMenu.toggle()" nav-direction="back">
+				<i class="icon tupicon-home"></i>
+				<span class="menu-label">Accueil</span>
+			</ion-item>
+			
+			<ion-item class="item-icon-left" ui-sref="app.map({type: 'preservatif'})" ng-click="sideMenu.toggle()">
+				<i class="icon tupicon-poi"></i>
+				<span class="menu-label">Trouver un préservatif</span>
+			</ion-item>
+			
+			<ion-item class="item-icon-left" ui-sref="app.map({type: 'depistage'})" ng-click="sideMenu.toggle()">
+				<i class="icon tupicon-plus"></i>
+				<span class="menu-label">Lieux de dépistage</span>
+			</ion-item>
+			
+			<ion-item class="item-icon-left" ui-sref="app.fiches" ng-click="sideMenu.toggle()">
+				<i class="icon tupicon-bubbles_right"></i>
+				<span class="menu-label">Fiches pratiques</span>
+			</ion-item>
+			
+			<ion-item class="item-icon-left" ui-sref="app.agenda" ng-click="sideMenu.toggle()">
+					<i class="icon tupicon-agenda3"></i>
+					<span class="menu-label">Agenda</span>
+				</span>
+			</ion-item>
+			
+			<ion-item class="item-icon-left" ui-sref="app.apropos" ng-click="sideMenu.toggle()">
+				<i class="icon tupicon-condom"></i>
+				<span class="menu-label">À propos de TUP</span>
+			</ion-item>
+		</ion-list>
+			
+		<div id="share_menu">
+			<p>Partager l'application</p>
+
+			<div class="row">
+				<div class="col col-25" ng-click="openExternalLink( 'https://www.facebook.com/dialog/feed?app_id=940700619347185&display=popup&name=Besoin%20d%27un%20pr%C3%A9servatif%20?&description=L%27application%20TUP%20(Trouver%20Un%20Pr%C3%A9servatif)%20g%C3%A9olocalise%20les%20pr%C3%A9servatifs%20et%20les%20lieux%20de%20d%C3%A9pistage%20les%20plus%20proches.&link=http://www.trouverunpreservatif.fr&redirect_uri=http://www.trouverunpreservatif.fr&picture=http://img11.hostingpics.net/pics/918474Calque1011211.jpg' ); gaTrackEvent( 'nav', 'sharefacebook' )">
+					<img src="./img/share/facebook.svg" width="45" />
+				</div>
+				
+				<div class="col col-25" ng-click="openExternalLink( 'https://twitter.com/intent/tweet?url=http://www.trouverunpreservatif.fr/&text=L%27application%20TUP%20(Trouver%20Un%20Pr%C3%A9servatif)%20g%C3%A9olocalise%20les%20pr%C3%A9servatifs%20et%20les%20lieux%20de%20d%C3%A9pistage%20les%20plus%20proches.&original_referer=http://www.trouverunpreservatif.fr/' ); gaTrackEvent( 'nav', 'sharetwitter' )">
+					<img src="./img/share/twitter.svg" width="45" />
+				</div>
+				
+				<div class="col col-25" ng-click="openExternalLink( 'https://plus.google.com/share?url=trouverunpreservatif.fr' ); gaTrackEvent( 'nav', 'sharegoogleplus' )">
+					<img src="./img/share/googleplus.svg" width="45" />
+				</div>
+				
+				<div class="col col-25" ng-click="openExternalLink( 'mailto:?body=L%27application%20TUP%20(Trouver%20Un%20Pr%C3%A9servatif)%20g%C3%A9olocalise%20les%20pr%C3%A9servatifs%20et%20les%20lieux%20de%20d%C3%A9pistage%20les%20plus%20proches.%20Va%20sur%20http://www.trouverunpreservatif.fr/&subject=Besoin%20d%27un%20pr%C3%A9servatif%20?' ); gaTrackEvent( 'nav', 'sharemail' )">
+					<img src="./img/share/mail.svg" width="45" />
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</div>

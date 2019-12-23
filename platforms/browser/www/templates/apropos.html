@@ -1,0 +1,119 @@
+<ion-view title="{{ pageTitle }}" id="apropos" class="txt_aj"  ng-controller="aproposController">
+	<ion-content delegate-handle="content" has-bouncing="false">
+		<div class="row row-center fw_b" id="apropos_title">
+			<div style="padding-bottom: 10px;" class="col text-center">
+				<span>&Agrave; propos</span>
+			</div>
+		</div>
+
+		<div class="padding border_bgf">
+			<div class="border_bgc">
+				<p class="fw_b" >TUP est une application proposée par HF Prévention en collaboration avec MSD et parrainée par Marina Carrère d'Encausse.</p>
+				<p class="text-center">
+					<img src="./img/apropos/msd.png" />
+				</p>
+				<p>Filiale de Merck, Sharp & Dohme, MSD est un laboratoire pharmaceutique mondial fondé sur la recherche.</p>
+				<a href="#" class="bround_5px" ng-click="openExternalLink( 'http://www.msd-france.com/' )">Voir le site</a>
+			</div>
+			
+			<div class="border_bgc">
+				<p class="text-center">
+					<img src="./img/apropos/hf.png" />
+				</p>
+				<p>HF Prévention est une association nationale de prévention santé (IST, VIH, hépatites, diabète, obésité, problèmes cardio-vasculaires).</p>
+				<a href="#" class="bround_5px" ng-click="openExternalLink( 'http://www.hf-prevention.com/' )">Voir le site</a>
+			</div>
+			
+			<div>
+				<p class="text-center"><img src="./img/apropos/marina.png" /></p>
+				<p>Marina Carrère d'Encausse est journaliste et médecin échographiste.</p>
+			</div>
+		</div>
+		
+		<div class="padding">
+			<div>
+				<p class="fw_b">Conception et création</p>
+				<p class="text-center"><img src="./img/apropos/addiction.png" /></p>
+				<p>Addiction Agency est une agence de conseil en communication digitale.</p>
+				<a href="#" class="bround_5px" ng-click="openExternalLink( 'http://www.addiction-agency.com/' )">Voir le site</a>
+			</div>
+		</div>
+		
+		<div id="vie_privee_title" ng-class="{borderbottom : !show_vie_privee}" class="row row-center fw_b little_header first padding" ng-click="toggleViePrivee()">
+			<div class="col col-90">
+				<span>Vie privée</span>
+			</div>
+			<div class="col col-10 text-right">
+				<i ng-show="!show_vie_privee" style="color: rgb(199, 199, 204) !important" class="tupicon-chevron_down"></i>
+				<i ng-show="show_vie_privee"  style="color: rgb(199, 199, 204) !important"  class="tupicon-close"></i>
+			</div>
+		</div>
+
+		<div class="padding animate-show" id="vie_privee_content" ng-show="show_vie_privee" > <!--ng-class="{show: show_vie_privee, hide: !show_vie_privee}"-->
+			<div>
+				<p>TUP peut être utilisé sans entrer des informations permettant de vous identifier directement. MSD ne recueille aucune information personnelle lorsque vous utilisez TUP. Pour en savoir plus sur notre politique de confidentialité veuillez consulter le paragraphe n°5 «Données personnelles» de la rubrique «Conditions d’utilisation» dans la partie «Ressources».</p>
+			</div>
+		</div>
+		<div id="cookie" class="row row-center fw_b little_header padding" ng-click="toggleMyCookie()">
+			<div class="col col-90">
+				<span>Paramétrage des cookies</span>
+			</div>
+			<div class="col col-10 text-right">
+				<i ng-show="!show_cookie" style="color: rgb(199, 199, 204) !important" class="tupicon-chevron_down"></i>
+				<i ng-show="show_cookie" style="color: rgb(199, 199, 204) !important" class="tupicon-close"></i>
+			</div>
+		</div>
+		<!--ng-class="{show: show_cookie, hide: !show_cookie}"-->
+		<div class="padding animate-show" ng-show="show_cookie" >
+			<div>
+				<p>Le respect de votre vie privée est notre priorité. Nous aimerions utiliser des cookies pour réaliser des statistiques de visites. Vous pouvez gérer ou retirer votre consentement à tout moment. Pour en savoir plus et si vous souhaitez paramétrer les cookies, cliquez sur "Paramétrage des cookies"</p>
+			</div>
+		</div>
+		
+		<div id="cgu" class="row row-center fw_b little_header padding" ng-click="toggleCgu()">
+			<div class="col col-90">
+				<span>Conditions générales d'utilisation</span>
+			</div>
+			<div class="col col-10 text-right">
+				<i ng-show="!show_cgu" style="color: rgb(199, 199, 204) !important" class="tupicon-chevron_down"></i>
+				<i ng-show="show_cgu" style="color: rgb(199, 199, 204) !important" class="tupicon-close"></i>
+			</div>
+		</div>
+		<!--ng-class="{show: show_cgu, hide: !show_cgu}"-->
+		<div class="padding animate-show" ng-show="show_cgu" >
+			<p>À l’attention de l’utilisateur : Veuillez lire attentivement les présentes conditions générales d’utilisation car elles régissent votre accès et votre utilisation de cette Application. <br />
+			MSD FRANCE <br />
+			S.A.S au capital de 147.824,07€ <br />
+			34, avenue Léonard de Vinci <br />
+			CS 80 038 <br />
+			92418 Courbevoie Cedex <br />
+			Tél. : 01 80 46 40 00 <br />
+			En cliquant sur les boutons Télécharger/Installer/« J’accepte », vous acceptez d’être lié par les présentes conditions générales d’utilisation et vous vous engagez à vous y conformer. A défaut d’accepter les termes de ces conditions générales d’utilisation, vous ne pourrez pas télécharger/installer/utiliser l’Application. Veuillez quitter cette installation si vous décidez de ne pas en accepter les termes.</p>
+			<p>1. DESCRIPTION DE L’APPLICATION. Ces conditions générales d’utilisation régissent votre utilisation de l’Application, en ce compris ses contenus et notamment, les textes, informations, images, contenus audio, services, outils intégrés, programmes, logiciels, bases de données, assistants et autres éléments qu’elle contient (ensemble désignés l’ « Application »).</p>
+			<p>2. ACCÈS. Certaines fonctions de l'Application nécessitent que vous vous connectiez à Internet par le biais de votre téléphone mobile. Il vous appartient de vous équiper à vos frais du ou des matériel(s) nécessaire(s) afin de pouvoir vous connecter à Internet. Tous les coûts afférents à l'accès à l’Application, que ce soient les coûts relatifs aux matériels, aux logiciels ou à l’accès à Internet, sont à votre charge exclusive.</p>
+			<p>3. EXCLUSION DE RESPONSABILITÉ. Les informations contenues dans l’Application, y compris, notamment, les informations médicales, les images et toute autre information, vous sont communiquées à titre d’information. Bien que MSD ait fait ses meilleurs efforts pour s’assurer de l’exactitude de ces informations et pour décrire les pratiques généralement reconnues, sa responsabilité et celle de ses concédants, auteurs, rédacteurs, contributeurs et éditeurs respectifs ne pourra être engagée, et ce dans la limite autorisée par le droit applicable, au titre des erreurs ou omissions ou de toute autre conséquence découlant de l’utilisation de ces informations. De même, dans la limite autorisée par la loi applicable, MSD et ses concédants, auteurs, rédacteurs, contributeurs et éditeurs respectifs n’accordent aucune garantie, expresse ou tacite, quant à l’actualisation, l’exhaustivité ou l’exactitude des informations contenues dans l’Application. L’utilisation de ces informations pour une situation particulière reste de votre seule responsabilité.</p>
+			<p>4. INFORMATIONS MÉDICALES / MALADIES. Bien que certaines informations contenues dans l’Application concernent certaines maladies et/ou leurs traitements, vous devez consulter votre propre médecin. MSD ne vous propose pas de diagnostic médical personnalisé et ne donne aucun conseil de traitement. Seul votre médecin est en mesure d’évaluer votre état de santé et de vous fournir des informations quant à vos possibilités de traitement. VEUILLEZ CONSULTER VOTRE MÉDECIN.</p>
+			<p>5. DONNEES PERSONNELLES. Nous vous informons que MSD ne recueille aucune de vos données personnelles dans le cadre de votre utilisation de l'Application. Les médecins ou autres professionnels de santé qui recevraient de votre part, par e-mail ou tout autre moyen écrit, les données renseignées dans l’Application, effectuent un traitement de données personnelles de santé dont ils sont responsables. En conséquence, lesdits médecins ou autres professionnels de santé sont tenus au respect des dispositions de la loi « informatique et libertés » du 6 janvier 1978 modifiée et doivent notamment effectuer les formalités nécessaires à la déclaration du traitement de données personnelles ainsi réalisé auprès de la Commission Nationale de l’Informatique et des Libertés.</p>
+			<p>6. LICENCE. Sous réserve des termes des présentes, MSD vous accorde le droit limité, non exclusif et incessible d’accéder à et d’utiliser l’Application. Vous n’êtes pas autorisés à louer, vendre, sous-licencier, céder, prêter, distribuer, exporter, transférer, ou permettre à des tiers d’utiliser l’Application, la technologie ou toute autre information qu’elle contient. De même, vous n’êtes pas autorisés à créer des œuvres dérivées ou à modifier l’Application, la technologie ou toute autre information qu’elle contient. Cette licence prendra automatiquement fin si vous n’en respectez pas les termes. Vous êtes tenus au respect du droit applicable aux présentes. En conséquence, vous ne pouvez pas utiliser, télécharger ou exporter l’Application en violation du droit applicable à ces conditions générales d’utilisation.</p>
+			<p>7. MAINTIEN EN VIGUEUR. Les stipulations des Articles 7, 8, 9, 10, 11, 15, 16 (et l’un quelconque de leurs alinéas) et 17 resteront en vigueur après l’expiration ou la résiliation des présentes pour quelque motif que ce soit. Cette survie s’appliquera jusqu’à la prescription de toute action relative aux droits et obligations objets de la clause concernée.</p>
+			<p>8. ASSISTANCE. MSD n’assure pas la maintenance de l’Application, ni l’assistance à son utilisation.</p>
+			<p>9. LIENS HYPERTEXTES. MSD ou certains tiers sont susceptibles de vous proposer des liens hypertextes dirigeant vers d’autres sites Internet. La responsabilité de MSD ne pourra pas être engagée du fait de la mise à disposition et/ou de votre utilisation des données, logiciels ou de toute autre information ou contenu disponibles sur ces sites Internet tiers. Vous reconnaissez et acceptez que MSD ne pourra pas être tenue pour responsable des dommages ou pertes causés par la mise à disposition et/ou l’utilisation de ces données, logiciels ou autres informations.</p>
+			<p>10. EXCLUSION DE GARANTIES. Vous reconnaissez et convenez que l’application est fournie « en l’état » et « dans la mesure de sa disponibilite ». Msd ne garantit pas que l’application répondra à vos besoins, ni qu’elle sera constamment disponible ou que son utilisation sera ininterrompue, exempte d’erreurs ou qu’elle ne causera pas de trouble a votre telephone mobile ou votre terminal de connexion ; de même, msd n’accorde aucune garantie quant aux résultats obtenus par l’utilisation de l’application ou quant à l’exactitude ou la fiabilité des informations contenues dans l’application (en ce compris les informations provenant de tiers partenaires de msd ou de sites internet de tiers). De meme, msd ne garantit pas que les défauts de l’application seront corrigés. Msd et ses partenaires tiers excluent toute garantie de toute sorte, expresse, implicite ou legale, y compris, notamment, toute garantie de propriete, d'adéquation à un usage specifique et de non-violation des droits de tiers. Vous reconnaissez et convenez que toute information ou toute donnée obtenue lors de l’utilisation de l’application sera utlisee à vos risques et a votre seule discrétion. Vous serez seul responsable des dommages causés a votre système informatique ou de toute perte de données qui découlerait du téléchargement de ces informations et de ces donnees. Les exclusions de garanties prevues au present article sont applicables dans les limites autorisees par la loi applicable.</p>
+			<p>11. LIMITATION DE RESPONSABILITÉ. Vous reconnaissez et convenez que msd et ses concédants respectifs ne seront pas responsables, dans les limites autorisees par la loi applicable, des dommages directs, indirects, accessoires, et/ou consécutifs, y compris, notamment, de tous dommages corporels, materiels, immateriels, pertes de données, pertes de bénéfices ou interruptions d’activité resultant ou survenus dans le cadre : (i) de votre utilisation de l’application ou de l’utilisation de l’application par un tiers a partir de votre compte ; (ii) du coût de récupération des données, informations ou logiciels de remplacement ; (iii) de tout accès non autorisé a ou de toute altération de vos communications ou de vos données ; ou (iv) de tout autre dommage resultant du telechargement ou de l’utilisation de l’application. De plus, vous etes seul responsable de la saisie, du stockage et/ou de la communication de vos données personnelles dans l’application.</p>
+			<p>12. RÉSILIATION. Ces conditions générales d’utilisation resteront en vigueur jusqu’à leur résiliation, celle-ci pouvant intervenir à tout moment à votre initiative ou à l’initiative de MSD. À compter de la résiliation des présentes, vous vous engagez à cesser toute utilisation de l’Application et à supprimer et désinstaller définitivement toute copie de l’Application. En cas de non-respect par l’une des parties de l’un quelconque des termes de ces conditions générales d’utilisation, les droits de la partie en défaut au titre des présentes prendront fin de plein droit sans notification préalable de l’autre partie.</p>
+			<p>13. PROPRIETE INTELLECTUELLE. Vous reconnaissez (a) que l’Application comporte des informations confidentielles et d’autres données et informations protégées notamment par le droit de la propriété intellectuelle et (b) que MSD et/ou des tiers détiennent tous les droits, titres et participations dans et sur l’Application et les logiciels fournis par l’intermédiaire de l’Application ou en association avec celle-ci, y compris, notamment, l’ensemble des Droits de Propriété Intellectuelle y relatifs. Les termes « Droits de Propriété Intellectuelle » désignent l’ensemble des droits existants et à venir protégés par le droit des marques, le droit des brevets, les dispositions du droit applicable relatives à la protection du secret industriel, le droit d’auteur, le droit de la concurrence ou tous autres droits de propriété, et ce, pour le monde entier. Vous vous interdisez, et interdisez à tout tiers (i) de copier, de vendre, de concéder en licence, de distribuer, de céder, de modifier, d’adapter, de traduire, de créer des œuvres dérivées, de décompiler, de procéder à la rétro-ingénierie, de désassembler ou d’essayer d’obtenir ou de reconstituer le code source de l’Application et de ses composants, sauf si cela vous est autorisé, (ii) de prendre toute mesure visant à contourner ou à anéantir les mesures de protection contenues dans l’Application, (iii) d’utiliser l’Application afin d’accéder, de copier, de transférer, de transcoder ou de retransmettre tout contenu en violation de toute loi applicable ou de tout droit de tiers ou (iv) de supprimer, de dissimuler ou de modifier les mentions relatives au droit d’auteur, aux marques ou à toute autre mention relative aux droits de propriété de MSD ou de tiers apposées sur ou contenue dans l’Application.</p>
+			<p>14. USAGES INTERDITS DE L’APPLICATION. Vous vous interdisez de revendre l’Application, son utilisation ou tout accès à celle-ci.</p>
+			<p>15. CESSION. Vous vous interdisez de céder ou de transférer vos droits nés des présentes conditions générales d’utilisation sans l’accord préalable et écrit de MSD. MSD pourra céder l’intégralité de ses droits et obligations aux termes des présentes à toute filiale, société affiliée ou à tout cessionnaire de tout ou partie de son activité ou de ses actifs.</p>
+			<p>16. CLAUSES GÉNÉRALES.</p>
+			<p>16.1 Vous consentez à accéder à et à utiliser l’Application conformément aux lois et réglementations applicables et vous vous interdisez toute utilisation de l’Application à des fins illégales.</p>
+			<p>16.2 Le présent contrat est soumis au droit français et à la compétence des juridictions françaises.</p>
+			<p>16.3 Dans le cas où une ou plusieurs stipulation(s) des présentes serai(en)t déclarée(s) illégale(s) ou nulle(s) par quelque juridiction que ce soit, la validité, la légalité ou l'application des autres stipulations des présentes n'en sera pas affectée et MSD et vous convenez de vous rencontrer afin de substituer à ladite stipulation, une nouvelle stipulation valide qui lui soit aussi proche que possible tant sur le plan juridique qu’économique.</p>
+			<p>16.4 Le fait pour MSD de ne pas se prévaloir d’un manquement par vous à l’une quelconque de vos obligations en vertu des présentes, ne saurait être interprété comme une renonciation à l’obligation en cause.</p>
+			<p>16.5 Les titres des articles des présentes conditions générales d’utilisation sont mentionnés uniquement pour en faciliter la lecture par les parties et n’ont aucune portée légale ou contractuelle.</p>
+			<p>16.6 Ces conditions générales d’utilisation reflètent l’accord définitif, exclusif et entier existant entre vous et MSD. Elles annulent et remplacent tout autre contrat ou accord, écrit ou oral, antérieur ou actuel, entre vous et MSD.</p>
+			<p>17. EXCLUSIONS ET LIMITATIONS. Les limitations ou exclusions de garantie et de responsabilité mentionnées dans ces conditions générales d’utilisation vous sont opposables dans la limite du droit applicable.</p>
+			<p>18. CONTRAT. Par les présentes, vous déclarez et reconnaissez être juridiquement lié par les termes de ces conditions générales d’utilisation à compter du téléchargement de l’Application.</p>		
+            <p>INFC-1158179-0025 Décembre 2017</p>
+		</div>
+	</ion-content>
+</ion-view>

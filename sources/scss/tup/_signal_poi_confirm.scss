@@ -1,0 +1,46 @@
+#signal_poi_confirm, #add_poi_confirmation {
+	.scroll-content {
+		.row {
+			height: 100%;
+		}
+		
+		.col {
+			padding: 0 40px;
+		}
+	}
+	
+	.tupicon-poi {
+		font-size: 6em;
+	}
+	
+	.tupicon-condom {
+		font-size: 3em;
+		&:before {
+			position: relative;
+			top: 5px;
+		}
+	}
+	
+	.fz2em {
+		font-size: 2em;
+		margin-top: 21px;
+	}
+	
+	.fz1_2em {
+		font-size: 1.2em;
+		margin-top: 18px;
+	}
+	
+	.bar-footer {
+		height: $height-map-big-footer;
+		
+		.row {
+			padding: 0 17px;
+		}
+		
+		.col {
+			background-color: $color-gris-7;
+			padding: 20px 0;
+		}
+	}
+}

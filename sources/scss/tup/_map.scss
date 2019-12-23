@@ -1,0 +1,237 @@
+#map {
+    
+    .txt_wlaker {
+        position: absolute;
+        right: 16px;
+        //padding: 17px 17px 16px 17px;
+        z-index: 10000000028;
+        font-size: 16px;
+        line-height: 16px;
+        margin-top: 8px;
+        top: 42px;
+        max-width: 57px;
+		width: 57px;
+    }
+    
+    .hack {
+        height: $hack-height-map-header;
+    }
+	#btn_gps {
+		color: $energized;
+		
+		&.activate {
+			color: $dark;
+		}
+	}
+	
+	&.scroll-content {
+		.bar-header {
+			border: none;
+            padding: 0;
+			padding-bottom: 20px !important;
+			height: $height-map-header;
+			background-color: $calm;
+			
+			[class*="#{$ionicons-prefix}"] {
+				font-size: 22px;
+				padding: 11px 0;
+				
+				&:before {
+					position: relative;
+					top: 1px;
+				}
+			}
+			
+			.#{$ionicons-prefix}magnify {
+				&.onSearch {
+					background-color: $light;
+				}
+			}
+		}
+		
+		#header_map_search {
+			position: absolute;
+			top: $height-map-header;
+			width: 100%;
+			
+			.#{$ionicons-prefix}close {
+				position: absolute;
+				top: 0; right: 0;
+				z-index: 99;
+				padding: 14px 12px 10px;
+				color: $color-gris-1;
+			}
+			
+			label {
+				border-width: 0;
+				border-bottom-width: 1px;
+				padding: 5px 20px;
+			}
+		}
+		
+		.map_big_footer {
+			.angular-google-map-container {
+				bottom: $height-map-big-footer - 23px;
+			}
+		}
+		
+		.angular-google-map-container {
+			width: 100%;
+			position: absolute;
+			top: 0;
+			bottom: $height-map-little-footer - 23px;
+		}
+		
+		.bar-footer {
+			border-top: 1px solid $color-gris-3;
+			height: $height-map-little-footer;
+			padding: 0;
+			
+			&.map_big_footer {
+				height: $height-map-big-footer;
+				
+				#btn_wlaker {
+					top: -29px
+				}
+                
+				
+				#btn_gps {
+					top: -100px;
+					
+					&:before {
+						position: relative;
+						left: -2px;
+						top: 1px;
+					}
+				}
+			}
+			
+			.item {
+				padding: 16px 16px 17px 20px;
+				border: none;
+				
+				.col_timewalk, .col-ico, .col_desc {
+					@include flex(1);
+				}
+				
+				.col-ico {
+					max-width: 56px;
+					width: 56px;
+					height: 56px;
+				}
+				
+				.col_desc {
+					width: -webkit-calc( 100% - 20px - 56px - 10px - 10px - 56px - 16px );
+					width: calc( 100% - 20px - 56px - 10px - 10px - 56px - 16px );
+					margin-left: 10px;
+					padding-top: 2px;
+					
+					.map_footer_item_nom {
+						font-size: 18px;
+						line-height: 18p;
+						text-overflow: ellipsis;
+						overflow: hidden;
+						margin-bottom: 8px;
+						color: $dark;
+					}
+					
+					.map_footer_item_distance {
+						font-size: 16px;
+						line-height: 16px;
+						margin-top: 8px;
+					}
+				}
+				
+				.col_timewalk {
+					max-width: 57px;
+					width: 57px;
+					padding-top: 29px;
+				}
+			}
+			
+			#map_loading {
+				font-size: 1.2em;
+				text-transform: uppercase;
+				color: $color-gris-4;
+				padding-left: 20px;
+			}
+			
+			#btn_wlaker, #btn_gps {
+				position: absolute;
+				right: 16px;
+				padding: 17px 17px 16px 17px;
+				z-index: 10000000028;
+				font-size: 23px;
+			}
+
+			#btn_gps {
+				top: -70px;
+			}
+		}
+	}
+}
+
+#liste_poi {
+	margin-top: 14px;
+	z-index: 13;
+	position: absolute;
+	top: 100%;
+	background: #fff;
+	-webkit-transition-property: top;
+	transition-property: top;
+    -webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	
+	&.displayList, &.displayList.has-header  {
+		top: $bar-height;
+	}
+
+	.item {
+		border-width: 0;
+		border-bottom-width: 1px;
+		padding: 8px 17px;
+		border-bottom: 1px solid $color-gris-1;
+		margin: 0;
+		
+		.col-ico {
+			margin-right: 17px;
+			
+			max-width: 26px;
+			width: 26px;
+			height: 26px;
+		}
+		
+		.col-desc {
+			p {
+				text-overflow: ellipsis;
+			}
+
+			.liste_poi_type {
+				color: $energized;
+			}
+
+			.liste_poi_nom {
+				color: $dark;
+			}
+		}
+		
+		
+		.col-more {
+			width: 100px;
+			max-width: 100px;
+			
+			span {
+				color: $energized;
+			}
+			
+			.#{$ionicons-prefix}chevron_right {
+				color: $color-gris-1;
+				
+				&:before {
+					position: relative;
+					top: 3px;
+				}
+			}
+		}
+	}
+}

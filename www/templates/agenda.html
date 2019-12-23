@@ -1,0 +1,59 @@
+<ion-view title="{{ pageTitle }}" id="agenda" class="txt_aj" ng-controller="agendaContoller">
+	<ion-content delegate-handle="content" has-bouncing="true">
+		<ion-header-bar class="bar bar-calm">
+			<div class="row row-center dark text-center fw_b">
+				<div class="col">
+					Agenda
+				</div>
+			</div>
+		</ion-header-bar>
+		
+		<div id="agenda_items">
+			<div ng-repeat="event in events" id="item_{{ event.id }}" class="agenda_item">
+				<div class="items_agenda">
+					<div class="row row-center tupicon-agenda fw_b positive">
+						<div class="col" ng-if="( event.date_debut | date: 'yyyyMMMMdd' ) == ( event.date_fin | date: 'yyyyMMMMdd' )">
+							<span>Le {{ event.date_debut | date:"dd MMMM yyyy" }}</span>
+							
+							<br ng-if="(event.date_debut | date: 'HHmm') != '0000' || (event.date_fin | date: 'HHmm') != '0000'" />
+							
+							<span ng-if="(event.date_debut | date: 'HHmm') != '0000' && (event.date_fin | date: 'HHmm') != '0000'"  class="ng-binding" style="font-size: 85%;">
+								de {{ event.date_debut | date:"HH" }}h{{ event.date_debut | date:"mm" }} à  {{ event.date_fin | date:"HH" }}h{{ event.date_fin | date:"mm" }}
+							</span>
+							
+							<span ng-if="(event.date_debut | date: 'HHmm') != '0000' && (event.date_fin | date: 'HHmm') == '0000'"  class="ng-binding" style="font-size: 85%;">
+								A partir de {{ event.date_debut | date:"HH" }}h{{ event.date_debut | date:"mm" }}
+							</span>
+							
+							<span ng-if="(event.date_debut | date: 'HHmm') == '0000' && (event.date_fin | date: 'HHmm') != '0000'"  class="ng-binding" style="font-size: 85%;">
+								Jusqu'à  {{ event.date_fin | date:"HH" }}h{{ event.date_fin | date:"mm" }}
+							</span>
+						</div>
+						<div class="col" ng-if="( event.date_debut | date: 'yyyyMMMMdd' ) != ( event.date_fin | date: 'yyyyMMMMdd' )">
+							<span>Du {{ event.date_debut | date:"dd MMMM" }} au {{ event.date_fin| date:"dd MMMM yyyy" }}</span>
+														
+							<br ng-if="(event.date_debut | date: 'HHmm') != '0000' || (event.date_fin | date: 'HHmm') != '0000'" />
+							
+							<span ng-if="(event.date_debut | date: 'HHmm') != '0000' && (event.date_fin | date: 'HHmm') != '0000'"  class="ng-binding" style="font-size: 85%;">
+								de {{ event.date_debut | date:"HH" }}h{{ event.date_debut | date:"mm" }} à  {{ event.date_fin | date:"HH" }}h{{ event.date_fin | date:"mm" }}
+							</span>
+							
+							<span ng-if="(event.date_debut | date: 'HHmm') != '0000' && (event.date_fin | date: 'HHmm') == '0000'"  class="ng-binding" style="font-size: 85%;">
+								A partir de {{ event.date_debut | date:"HH" }}h{{ event.date_debut | date:"mm" }}
+							</span>
+							
+							<span ng-if="(event.date_debut | date: 'HHmm') == '0000' && (event.date_fin | date: 'HHmm') != '0000'"  class="ng-binding" style="font-size: 85%;">
+								Jusqu'à  {{ event.date_fin | date:"HH" }}h{{ event.date_fin | date:"mm" }}
+							</span>
+						</div>
+					</div>
+					<p class="fw_b item_nom">{{ event.nom }}</p>
+					
+					<div ng-if="event.image && event.image != ''"><img src="http://tupdata.fr/upload/{{ event.image }}" /></div>
+					
+					<div class="item_desc" ng-bind-html="event.description"></div>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

@@ -1,0 +1,72 @@
+<ion-view title="{{ pageTitle }}" id="home" ng-controller="homeContoller" cache-view="false" hide-back-button="true">
+	<ion-content padding="true" has-bouncing="false" scroll="false" ng-hide="!isCookie">
+
+		<div id="parent_button" class="row row-bottom">
+
+			<div class="col">
+				<button class="button button-full button-royal icon icon-left tupicon-condom bround_5px fw_b" ui-sref="app.map({type: 'preservatif'})" nav-direction="forward" ng-click="gaTrackEvent( 'home', 'tup' )">
+					<span>Trouver un préservatif</span>
+				</button>
+
+				<button class="button button-full button-stable icon-left tupicon-exclam bround_5px fw_b" ui-sref="app.agir_apres_un_risque" nav-direction="forward" ng-click="gaTrackEvent( 'home', 'agir' )">
+					<span>Agir après un risque</span>
+				</button>
+			</div>
+		</div>
+		
+		<div class="row row-center text-center">
+			<div class="col col-33">
+				<div class="btn_small_one">
+					<button class="button tupicon-plus button-stable bround_50p" ui-sref="app.map({type: 'depistage'})" nav-direction="forward" ng-click="gaTrackEvent( 'home', 'lieuxdedepistage' )"></button>
+					<div class="stable btn_small_label fw_b">Lieux de dépistage</div>
+				</div>
+			</div>
+			
+			<div class="col col-33">
+				<div class="btn_small_two">
+					<button class="button tupicon-bubbles_inter button-assertive bround_50p" ui-sref="app.fiches" nav-direction="forward" ng-click="gaTrackEvent( 'home', 'fichespratiques' )"></button>
+					<div class="assertive btn_small_label fw_b">Fiches Pratiques</div>
+				</div>
+			</div>
+			
+			<div class="col col-33">
+				<div class="btn_small_third">
+					<button class="button tupicon-agenda3 button-positive bround_50p" ui-sref="app.agenda" nav-direction="forward" ng-click="gaTrackEvent( 'home', 'agenda' )"></button>
+					<div class="positive btn_small_label fw_b">Agenda<br /><span class="invisible">a</span></div>
+				</div>
+			</div>
+		</div>
+		
+	
+	</ion-content>
+	<style>
+	#home .bar-footer{height: {{tailleFooter}} }
+	#thecookies p {color:#fff !important;margin: 5px;line-height: 16px;}
+	#thecookies a {color:#fff !important;text-decoration: underline;}
+	</style>
+	<ion-footer-bar class="bar">
+
+	<div id='thecookies' ng-hide="isCookie" style="font-size:1em;line-height:10px;text-align: center;padding-top: 5px;background-color: #000;color:fff !important;display: block;width: 100%">
+	<p><b>Bienvenue sur l'application TUP</b><br><br>
+	<span>
+	Le respect de votre vie privée est notre priorité. Nous utilisons des cookies pour réaliser des statistiques de visites et améliorer l'expérience utilisateur. Vous pouvez modifier votre consentement à tout moment dans la section suivante : <a href='#/app/apropos#cookies'>Paramétrage des cookies</a>.
+	</p>
+	</span><br><br>
+<button class="button light bround_5px" id='btnAccept' ng-click="cookieOk()" style="color:#000;background-color:#cecece;font-size:0.9em;border:1px solid #000">J'accepte</button>&nbsp;&nbsp;<button class="button light bround_5px"  id='btnDecline' ng-click="cookieKo()" style="color:#000;background-color:#cecece;font-size:0.9em;border:1px solid #000">Je décline</button>
+	</div>
+
+		<ion-slide-box ng-hide="!isCookie" delegate-handle="homepage" show-pager="false" does-continue="true" auto-play="true" on-slide-changed="slideHasChanged($index)">
+			<ion-slide ng-repeat="event in events_en_avant">
+				<div class="item item-text-wrap" ui-sref="{{ event.url }}" nav-direction="forward" ng-click="gaTrackEvent( 'home', 'notification', 'go', event.id )">
+					<div class="row row-center icon-left tupicon-{{ event.type }} royal fw_b">
+						<div class="col">
+							<span>{{ event.title }}</span>
+						</div>
+					</div>
+					<div class="home_footer_desc energized">{{ event.preview }}</div>
+				</div>
+			</ion-slide>
+		</ion-slide-box>
+	
+	</ion-footer-bar>
+</ion-view>

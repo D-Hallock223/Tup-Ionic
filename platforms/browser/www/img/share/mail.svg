@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <path fill="#BCBDC1" d="M64 128C28.7 128 0 99.3 0 64S28.7 0 64 0s64 28.7 64 64-28.7 64-64 64z"/>
+  <path fill="#FFF" d="M31.5 43h65v42h-65z"/>
+  <g fill="none" stroke="#BCBDC1" stroke-width="2">
+    <path d="M96.5 85V43h-65v42h65z"/>
+    <path d="M31.5 43.2l28.7 25.3c2.1 1.8 5.9 1.8 7.9 0L96.5 43m-65 42l23.1-20.7M96.5 85L73.8 64.6"/>
+  </g>
+</svg>

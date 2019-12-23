@@ -1,0 +1,245 @@
+<ion-view title="{{ pageTitle }}" id="add_distribution" ng-controller="addPoiContoller">
+	<ion-content has-bouncing="false">
+		<ion-header-bar class="bar bar-calm">
+			<div class="row row-center dark text-center fw_b">
+				<div class="col">
+					Nouveau lieu de distribution
+				</div>
+			</div>
+		</ion-header-bar>
+		
+		<div id="add_distribution_content">
+			<div class="row padding" id="adc_info">
+				<div class="col fw_b" ng-class="{fieldError: ( isError && lieu.type == '') }">Type de lieu*</div>
+				<div class="col text-right" ng-class="{fieldError: isError }">* Champs obligatoires</div>
+			</div>
+			
+			<ion-list id="add_distribution_type" ng-class="{selected : lieu.type != '' }">
+				<ion-item class="padding" ng-click="setType('Presse'); gaTrackEvent( 'TUP', 'ajout', 'Presse' )" ng-show="lieu.type=='' || lieu.type=='Presse'">
+					<div class="row row-center">
+						<div class="col col-ico">
+							<img src="./img/map/svg_normal/presse.svg" width="27" />
+						</div>
+						<div class="col col-desc energized">
+							<p>Presse</p>
+						</div>
+						<div class="col col-more text-right" ng-click="setType(''); $event.stopPropagation();" ng-show="lieu.type!=''">
+							<i class="tupicon-close"></i>
+						</div>
+					</div>
+				</ion-item>
+				
+				<ion-item class="padding" ng-click="setType('Distributeur'); gaTrackEvent( 'TUP', 'ajout', 'Distributeur' )" ng-show="lieu.type=='' || lieu.type=='Distributeur'">
+					<div class="row row-center">
+						<div class="col col-ico">
+							<img src="./img/map/svg_normal/distributeur.svg" width="27" />
+						</div>
+						<div class="col col-desc energized">
+							<p>Distributeur</p>
+						</div>
+						<div class="col col-more text-right" ng-click="setType(''); $event.stopPropagation();" ng-show="lieu.type!=''">
+							<i class="tupicon-close"></i>
+						</div>
+					</div>
+				</ion-item>
+				
+				<ion-item class="padding" ng-click="setType('Pharmacie'); gaTrackEvent( 'TUP', 'ajout', 'Pharmacie' )" ng-show="lieu.type=='' || lieu.type=='Pharmacie'">
+					<div class="row row-center">
+						<div class="col col-ico">
+							<img src="./img/map/svg_normal/pharmacie.svg" width="27" />
+						</div>
+						<div class="col col-desc energized">
+							<p>Pharmacie</p>
+						</div>
+						<div class="col col-more text-right" ng-click="setType(''); $event.stopPropagation();" ng-show="lieu.type!=''">
+							<i class="tupicon-close"></i>
+						</div>
+					</div>
+				</ion-item>
+				
+				<ion-item class="padding" ng-click="setType('Métro'); gaTrackEvent( 'TUP', 'ajout', 'Métro' )" ng-show="lieu.type=='' || lieu.type=='Métro'">
+					<div class="row row-center">
+						<div class="col col-ico">
+							<img src="./img/map/svg_normal/metro.svg" width="27" />
+						</div>
+						<div class="col col-desc energized">
+							<p>Métro</p>
+						</div>
+						<div class="col col-more text-right" ng-click="setType(''); $event.stopPropagation();" ng-show="lieu.type!=''">
+							<i class="tupicon-close"></i>
+						</div>
+					</div>
+				</ion-item>
+				
+				<ion-item class="padding" ng-click="setType('Mairie'); gaTrackEvent( 'TUP', 'ajout', 'Mairie' )" ng-show="lieu.type=='' || lieu.type=='Mairie'">
+					<div class="row row-center">
+						<div class="col col-ico">
+							<img src="./img/map/svg_normal/mairie.svg" width="27" />
+						</div>
+						<div class="col col-desc energized">
+							<p>Mairie</p>
+						</div>
+						<div class="col col-more text-right" ng-click="setType(''); $event.stopPropagation();" ng-show="lieu.type!=''">
+							<i class="tupicon-close"></i>
+						</div>
+					</div>
+				</ion-item>
+				
+				<ion-item class="padding" ng-click="setType('Supermarché'); gaTrackEvent( 'TUP', 'ajout', 'Supermarché' )" ng-show="lieu.type=='' || lieu.type=='Supermarché'">
+					<div class="row row-center">
+						<div class="col col-ico">
+							<img src="./img/map/svg_normal/supermarche.svg" width="27" />
+						</div>
+						<div class="col col-desc energized">
+							<p>Supermarché</p>
+						</div>
+						<div class="col col-more text-right" ng-click="setType(''); $event.stopPropagation();" ng-show="lieu.type!=''">
+							<i class="tupicon-close"></i>
+						</div>
+					</div>
+				</ion-item>
+				
+				<ion-item class="padding" ng-click="setType('Planning Familial'); gaTrackEvent( 'TUP', 'ajout', 'Planning Familial' )" ng-show="lieu.type=='' || lieu.type=='Planning Familial'">
+					<div class="row row-center">
+						<div class="col col-ico">
+							<img src="./img/map/svg_normal/planning_familial.svg" width="27" />
+						</div>
+						<div class="col col-desc energized">
+							<p>Planning Familal</p>
+						</div>
+						<div class="col col-more text-right" ng-click="setType(''); $event.stopPropagation();" ng-show="lieu.type!=''">
+							<i class="tupicon-close"></i>
+						</div>
+					</div>
+				</ion-item>
+				
+				<ion-item class="padding" ng-click="setType('Centre IVG'); gaTrackEvent( 'TUP', 'ajout', 'Centre IVG' )" ng-show="lieu.type=='' || lieu.type=='IVG'">
+					<div class="row row-center">
+						<div class="col col-ico">
+							<img src="./img/map/svg_normal/centre_ivg.svg" width="27" />
+						</div>
+						<div class="col col-desc energized">
+							<p>Centre IVG</p>
+						</div>
+						<div class="col col-more text-right" ng-click="setType(''); $event.stopPropagation();" ng-show="lieu.type!=''">
+							<i class="tupicon-close"></i>
+						</div>
+					</div>
+				</ion-item>
+				
+				<ion-item class="padding" ng-click="setType('Centre d\'écoute'); gaTrackEvent( 'TUP', 'ajout', 'Centre d\'écoute' )" ng-show="lieu.type=='' || lieu.type=='Centre d\'écoute'">
+					<div class="row row-center">
+						<div class="col col-ico">
+							<img src="./img/map/svg_normal/centre_decoute.svg" width="27" />
+						</div>
+						<div class="col col-desc energized">
+							<p>Centre d'écoute</p>
+						</div>
+						<div class="col col-more text-right" ng-click="setType(''); $event.stopPropagation();" ng-show="lieu.type!=''">
+							<i class="tupicon-close"></i>
+						</div>
+					</div>
+				</ion-item>
+			</ion-list>
+			
+			<div class="list padding" id="adc_nom">
+				<label class="item item-input border_b">
+					<span class="input-label fw_b">Nom du lieu</span>
+				</label>
+				
+				<label class="item item-input">
+					<input type="text" placeholder="Nom" ng-model="lieu.nom" ng-click="gaTrackEvent( 'TUP', 'ajout', 'nom' )">
+				</label>
+			</div>
+			
+			<div class="list padding border_b" id="adc_adresse">
+				<label class="item item-input icon-left tupicon-poi">
+					<span class="input-label fw_b" ng-class="{fieldError: isError && (!lieu.adresse1 || !lieu.codePostal || !lieu.ville)}">Adresse*</span>
+				</label>
+				
+				<label class="item item-input border_b">
+					<input type="text" placeholder="Rue" ng-model="lieu.adresse1" value="{lieu.adresse1}" ng-class="{fieldError: isError && !lieu.adresse1}" ng-click="gaTrackEvent( 'TUP', 'ajout', 'rue' )">
+				</label>
+				
+				<label class="item item-input border_b">
+					<input type="number" placeholder="Code postal" ng-model="lieu.codePostal" ng-class="{fieldError: isError && !lieu.codePostal}" ng-click="gaTrackEvent( 'TUP', 'ajout', 'CP' )">
+				</label>
+				
+				<label class="item item-input">
+					<input type="text" placeholder="Ville" ng-model="lieu.ville" ng-class="{fieldError: isError && !lieu.ville}" ng-click="gaTrackEvent( 'TUP', 'ajout', 'ville' )">
+				</label>
+			</div>
+			
+			<div class="list padding" id="adc_tel">
+				<label class="item item-input icon-left tupicon-phone border_b">
+					<span class="input-label fw_b">Téléphone</span>
+				</label>
+				
+				<label class="item item-input">
+					<input type="tel" placeholder="Numéro" ng-model="lieu.telephone" ng-click="gaTrackEvent( 'TUP', 'ajout', 'telephone' )">
+				</label>
+			</div>
+			
+			<label class="item item-input icon-left tupicon-clock padding">
+				<span class="input-label fw_b">Horaires</span>
+			</label>
+			
+			<div class="list padding" id="adc_horaires">
+				<div ng-repeat="i in basedHtml.nbTable track by $index" ng-show="basedHtml.showTable[ $index ]" class="adc_horaires_repeat">
+					<div class="row txt_c9 add_distribution_horaires" ng-class="{ first_horaires : $index == 0 }">
+						<div class="col">
+							<span class="btn_jour bround_50p" ng-class="{selected: basedHtml.daySelected.L == $index}" ng-click="selectDay( 'L', $index ); gaTrackEvent( 'TUP', 'ajout', 'jour' )" ng-show="basedHtml.daySelected.L == 'no' || basedHtml.daySelected.L == $index">L</span>
+							
+							<span class="btn_jour bround_50p" ng-class="{selected: basedHtml.daySelected.M == $index}" ng-click="selectDay( 'M', $index ); gaTrackEvent( 'TUP', 'ajout', 'jour' )" ng-show="basedHtml.daySelected.M == 'no' || basedHtml.daySelected.M == $index">M</span>
+							
+							<span class="btn_jour bround_50p" ng-class="{selected: basedHtml.daySelected.Me == $index}" ng-click="selectDay( 'Me', $index ); gaTrackEvent( 'TUP', 'ajout', 'jour' )" ng-show="basedHtml.daySelected.Me == 'no' || basedHtml.daySelected.Me == $index">Me</span>
+
+							<span class="btn_jour bround_50p" ng-class="{selected: basedHtml.daySelected.J == $index}" ng-click="selectDay( 'J', $index ); gaTrackEvent( 'TUP', 'ajout', 'jour' )" ng-show="basedHtml.daySelected.J == 'no' || basedHtml.daySelected.J == $index">J</span>
+
+							<span class="btn_jour bround_50p" ng-class="{selected: basedHtml.daySelected.V == $index}" ng-click="selectDay( 'V', $index ); gaTrackEvent( 'TUP', 'ajout', 'jour' )" ng-show="basedHtml.daySelected.V == 'no' || basedHtml.daySelected.V == $index">V</span>
+
+							<span class="btn_jour bround_50p" ng-class="{selected: basedHtml.daySelected.S == $index}" ng-click="selectDay( 'S', $index ); gaTrackEvent( 'TUP', 'ajout', 'jour' )" ng-show="basedHtml.daySelected.S == 'no' || basedHtml.daySelected.S == $index">S</span>
+
+							<span class="btn_jour bround_50p" ng-class="{selected: basedHtml.daySelected.D == $index}" ng-click="selectDay( 'D', $index ); gaTrackEvent( 'TUP', 'ajout', 'jour' )" ng-show="basedHtml.daySelected.D == 'no' || basedHtml.daySelected.D == $index">D</span>
+						</div>
+					</div>
+
+					<div class="row row-center borbl bortl">
+						<div class="col col-50">
+							<label class="item item-input">
+								<span ng-if="!basedHtml.timeValues[ $index ].horaire1" class="addpoi_placeholder">De</span>
+								<input class="input_time" type="time" ng-model="basedHtml.timeValues[ $index ].horaire1" ng-click="gaTrackEvent( 'TUP', 'ajout', 'horaires' )" />
+							</label>
+						</div>
+						
+						<div class="col col-50 borll">
+							<label class="item item-input">
+								<span ng-if="!basedHtml.timeValues[ $index ].horaire2" class="addpoi_placeholder">à</span>
+								<input class="input_time" type="time" ng-model="basedHtml.timeValues[ $index ].horaire2" ng-click="gaTrackEvent( 'TUP', 'ajout', 'horaires' )" />
+							</label>
+						</div>
+					</div>
+					
+					<div class="row row-center borbl addpoi_days_secondline">
+						<div class="col col-50">
+							<label class="item item-input">
+								<span ng-if="!basedHtml.timeValues[ $index ].horaire3" class="addpoi_placeholder">Et de</span>
+								<input class="input_time" type="time" ng-model="basedHtml.timeValues[ $index ].horaire3" ng-click="gaTrackEvent( 'TUP', 'ajout', 'horaires' )" />
+							</label>
+						</div>
+						
+						<div class="col col-50 borll">
+							<label class="item item-input">
+								<span ng-if="!basedHtml.timeValues[ $index ].horaire4" class="addpoi_placeholder">à</span>
+								<input class="input_time" type="time" ng-model="basedHtml.timeValues[ $index ].horaire4" ng-click="gaTrackEvent( 'TUP', 'ajout', 'horaires' )" />
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="padding" id="btn_valid">
+				<button class="button button-full light bround_5px" ng-click="validLieu(); gaTrackEvent( 'TUP', 'ajout', 'valider' )" id="add_distribution_submit">VALIDER</button>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

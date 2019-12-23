@@ -1,0 +1,39 @@
+#agenda {
+	.scroll-content {
+		.bar-header {
+			height: $height-medium-plus-footer;
+			border: none;
+		}
+		
+		#agenda_items {
+			position: relative;
+			top: $height-medium-plus-footer;
+			
+			.agenda_item {
+				padding: 26px 17px;
+				border-bottom: 1px solid $color-gris-5;
+			}
+			
+			.#{$ionicons-prefix}agenda {
+				font-size: 14px;
+				margin-bottom: 8px;
+				
+				&:before {
+					font-size: 25px;
+					margin-right: 5px;
+				}
+			}
+			
+			img { max-width: 100%; }
+			
+			.item_nom, .item_desc {
+				font-size: 13px;
+			}
+			
+			.item_desc {
+				text-align: justify;
+				line-height: 17px;
+			}
+		}
+	}
+}

@@ -1,0 +1,149 @@
+#home {
+	background: url(../img/fond_home.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+    background-size: cover;
+    
+	
+	.scroll-content {
+		color: $light;
+		
+		&.has-footer { bottom: $height-very-big-footer; }
+	
+		.row, .col {
+			padding: 0 5px;
+		}
+		
+		.row-bottom {
+			height: 60%;
+			
+			@media screen and (min-width: 380px) {
+				height: 58%;
+			}
+		}
+		.row-center {
+			height: 40%;
+			padding-top: 2px;
+			
+			@media screen and (min-width: 380px) {
+				height: 42%;
+				padding-top: 0;
+			}
+		}
+		
+		#parent_button {
+			margin-top: 8px;
+			
+			@media screen and (min-width: 380px) {
+				margin-top: 0;
+			}
+		}
+		
+		.btn_small_one, .btn_small_two, .btn_small_third { width: 74px; }
+		.btn_small_two { margin: 0 auto; }
+		.btn_small_third { float: right; }
+		.btn_small_label { margin-top: 10px; line-height: 15px; }
+		
+		button {
+			color: $light;
+			border-width: 0;
+			
+			&.#{$ionicons-prefix}condom {
+				margin-bottom: 5px;
+			}
+			
+			&.#{$ionicons-prefix}condom, &.#{$ionicons-prefix}exclam {
+				height: 70px;
+				font-size: 16px;
+			}
+			
+			&.#{$ionicons-prefix}condom:before {
+				color: $stable;
+				font-size: 30px;
+			}
+			&.#{$ionicons-prefix}exclam:before {
+				color: $royal;
+				font-size: 27px;
+			}
+			&.#{$ionicons-prefix}condom:before, &.#{$ionicons-prefix}exclam:before {
+				padding: 0;
+				position: absolute;
+				left: 19px;
+			}
+			
+			&.#{$ionicons-prefix}plus {
+				font-size: 24px;
+				padding: 16px 25px;
+				
+				&:before {
+					position: relative;
+					top: 1px;
+				}
+			}
+			
+			&.#{$ionicons-prefix}bubbles_inter {
+				font-size: 30px;
+				padding: 16px 22px;
+				
+				&:before {
+					position: relative;
+					top: 2px;
+				}
+			}
+			
+			&.#{$ionicons-prefix}agenda3 {
+				font-size: 32px;
+				padding: 16px 21px;
+				
+				&:before {
+					position: relative;
+					top: 1px;
+				}
+			}
+			
+			&.#{$ionicons-prefix}plus, &.#{$ionicons-prefix}bubbles_inter, &.#{$ionicons-prefix}agenda3 {
+				
+			}
+		}
+	
+	}
+
+	.bar-footer {
+		background-color: $light;
+		border-top: 1px solid $color-gris-1;
+		height: $height-big-footer;
+		padding: 0;
+		
+		.item {
+			border: none;
+			padding: 10px 20px 0 20px;
+			
+			.row {
+				padding: 0;
+			}
+			
+			[class*="#{$ionicons-prefix}"]:before {
+				font-size: 22px;
+				margin-right: 8px;
+			}
+			
+			.home_footer_desc, .row-center {
+				width: 100%;
+			}
+			
+			.home_footer_desc {
+				font-size: 13px;
+				margin-top: 4px;
+				text-align: justify;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+		}
+	}
+
+	.padding {
+		@media screen and (min-width: 380px) {
+			padding: 0 38px;
+		}
+	}
+}

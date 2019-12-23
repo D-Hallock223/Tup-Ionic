@@ -1,0 +1,82 @@
+<ion-view title="{{ pageTitle }}" ng-controller="mapContoller" cache-view="false">
+	<ion-content id="map" has-bouncing="false" scroll="false">
+		<ion-header-bar class="bar" id="header_map">
+			<div class="row row-center royal text-center">
+				<div class="col tupicon-magnify hack" ng-class="{onSearch: search.isEnable}" ng-click="toggleSearchBox()"></div>
+				<div class="col tupicon-plus_light" ng-show="type == 'preservatif'" ng-click="addDistribution(); gaTrackEvent( 'TUP', 'ajout' )"></div>
+			</div>
+		</ion-header-bar>
+		
+		<div id="header_map_search" ng-show="search.isEnable">
+			<form ng-submit="searchAddress()">
+				<label class="item item-input">
+					<input type="text" ng-model="search.text" placeholder="Rechercher (Adresse)" ng-click="trackEvents( 'searchcomp' )" />
+				</label>
+				<i class="tupicon-close fz1_2em txt_c6" ng-click="closeSearchBox()"></i>
+			</form>
+		</div>
+	
+		<div ng-class="{ map_big_footer: markerSelectedTmpKey || markerSelectedTmpKey === 0 }" data-tap-disabled="true">
+			<ui-gmap-google-map ng-show="iMap.objects.preservatif" center='iMap.objects.preservatif.center' zoom='iMap.objects.preservatif.zoom' bounds='iMap.objects.preservatif.bounds' options='iMap.mapOptions' events="iMap.events">
+				<ui-gmap-markers models="iMap.markers.places.preservatif" coords="'self'" icon="'icon'" events="iMap.markers.events" ></ui-gmap-markers>
+				<ui-gmap-markers models="iMap.markers.position" coords="'self'" icon="'icon'" options="'options'" ></ui-gmap-markers>
+			</ui-gmap-google-map>
+			
+			<ui-gmap-google-map ng-show="iMap.objects.depistage" center='iMap.objects.depistage.center' zoom='iMap.objects.depistage.zoom' bounds='iMap.objects.depistage.bounds' options='iMap.mapOptions' events="iMap.events">
+				<ui-gmap-markers models="iMap.markers.places.depistage" coords="'self'" icon="'icon'" events="iMap.markers.events" ></ui-gmap-markers>
+				<ui-gmap-markers models="iMap.markers.position" coords="'self'" icon="'icon'" options="'options'" ></ui-gmap-markers>
+			</ui-gmap-google-map>
+		</div>
+
+		<ion-footer-bar class="bar" ng-class="{ map_big_footer: markerSelectedTmpKey || markerSelectedTmpKey === 0 }">
+			<div id="btn_wlaker" ng-show="markerSelectedTmpKey || markerSelectedTmpKey === 0" class="tupicon-walker bround_50p royal-bg light" ng-click="goItineraire(); trackEvents( 'itineraire' )"></div>
+			<div id="btn_gps" class="tupicon-geopos bround_50p light-bg" ng-class="{ activate: gpsIsActive }" ng-click="askToGps()"></div>
+			
+			<div id="map_loading" ng-hide="markerSelectedTmpKey || markerSelectedTmpKey === 0" class="txt_upcase row row-center" ng-click="displayResult()">
+				<div class="col">
+					{{ txtFooter }}
+				</div>
+			</div>
+			
+			<ion-slide-box delegate-handle="googlemap" show-pager="false" on-slide-changed="changeSizeMarker( $index, true )" ng-show="iMap.markers.displayPlaces && ( markerSelectedTmpKey || markerSelectedTmpKey === 0 )">
+				<ion-slide ng-repeat="place in iMap.markers.displayPlaces">
+					<div class="item" ui-sref="app.poi({id: place.id, type: type})" nav-direction="forward">
+						<div class="row row-center">
+							<div class="col col-ico">
+								<img src="img/map/{{ place.folderIco }}/{{ place.typeless }}.svg" />
+							</div>
+							<div class="col col_desc">
+								<p class="map_footer_item_nom fw_b">{{ place.nom }}</p>
+								<p class="map_footer_item_distance"><span ng-if="place.distance < 100000">{{ place.distance | number:0 }} m</span><span ng-if="place.distance >= 100000">{{ ( place.distance / 1000 ) | number:0 }} km</span></p>
+							</div>
+							<div class="col col_timewalk text-center">
+								<span class="royal">{{ place.timewalk }}</span>
+							</div>
+						</div>
+					</div>
+				</ion-slide>
+			</ion-slide-box>
+		</ion-footer-bar>
+	</ion-content>
+	
+	<ion-content has-bouncing="false" id="liste_poi" ng-class="{ displayList : isMapListActivate }">
+		<div class="list">
+			<div class="item" ng-repeat="poi in iMap.markers.displayPlaces" ui-sref="app.poi({id: poi.id, type: type})" ng-click="trackEvents( 'list', poi.type, poi.id )">
+				<div class="row row-center">
+					<div class="col col-ico" style="width: 35px;">
+						<img style="width: 35px !important;height: 40px !important;" src="img/map/svg_normal/{{ poi.typeless }}.png" />
+					</div>
+					
+					<div class="col col-desc" style="width: calc(100% - 156px) !important;">
+						<p><span class="liste_poi_type" ng-if="type == 'preservatif'">{{ poi.type }} - </span><span class="liste_poi_nom">{{ poi.nom }}</span></p>
+					</div>
+					
+					<div class="col col-more text-right">
+						<span ng-if="poi.distance < 100000">{{ poi.distance | number:0 }} m</span><span ng-if="poi.distance >= 100000">{{ ( poi.distance / 1000 ) | number:0 }} km</span>
+						<i class="tupicon-chevron_right"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

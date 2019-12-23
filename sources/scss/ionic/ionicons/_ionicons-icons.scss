@@ -1,0 +1,93 @@
+// Ionicons Icons
+// --------------------------
+
+.ionicons,
+.#{$ionicons-prefix}agenda:before,
+.#{$ionicons-prefix}agenda3:before,
+.#{$ionicons-prefix}barriere:before,
+.#{$ionicons-prefix}bubbles_inter:before,
+.#{$ionicons-prefix}bubbles_left:before,
+.#{$ionicons-prefix}bubbles_right:before,
+.#{$ionicons-prefix}chevron_down:before,
+.#{$ionicons-prefix}chevron_left:before,
+.#{$ionicons-prefix}chevron_right:before,
+.#{$ionicons-prefix2}chevron_down:before,
+.#{$ionicons-prefix2}chevron_right:before,
+.#{$ionicons-prefix}clock:before,
+.#{$ionicons-prefix}close:before,
+.#{$ionicons-prefix}condom:before,
+.#{$ionicons-prefix}condomfemme:before,
+.#{$ionicons-prefix}contraception:before,
+.#{$ionicons-prefix}depistage_fixe:before,
+.#{$ionicons-prefix}depistage_mobile:before,
+.#{$ionicons-prefix}distributeur:before,
+.#{$ionicons-prefix}exclam:before,
+.#{$ionicons-prefix}geopos:before,
+.#{$ionicons-prefix}home:before,
+.#{$ionicons-prefix}interrogation:before,
+.#{$ionicons-prefix}ist:before,
+.#{$ionicons-prefix}magnify:before,
+.#{$ionicons-prefix}mairie:before,
+.#{$ionicons-prefix}metro:before,
+.#{$ionicons-prefix}navicon:before,
+.#{$ionicons-prefix}pharmacie:before,
+.#{$ionicons-prefix}phone:before,
+.#{$ionicons-prefix}planningfam:before,
+.#{$ionicons-prefix}planning_familial:before,
+.#{$ionicons-prefix}plume:before,
+.#{$ionicons-prefix}plus:before,
+.#{$ionicons-prefix}plus_light:before,
+.#{$ionicons-prefix}poi:before,
+.#{$ionicons-prefix}presse:before,
+.#{$ionicons-prefix}signal:before,
+.#{$ionicons-prefix}star:before,
+.#{$ionicons-prefix}operation_speciale:before,
+.#{$ionicons-prefix}supermarche:before,
+.#{$ionicons-prefix}supermarket:before,
+.#{$ionicons-prefix}tpe:before,
+.#{$ionicons-prefix}walker:before,
+.#{$ionicons-prefix}ivg:before,
+.#{$ionicons-prefix}centre_decoute:before,
+.ion-record:before
+{
+  @extend .ion;
+}
+.#{$ionicons-prefix}agenda:before { content: $ionicon-agenda; }
+.#{$ionicons-prefix}agenda3:before { content: $ionicon-agenda3; }
+.#{$ionicons-prefix}barriere:before { content: $ionicon-barriere; }
+.#{$ionicons-prefix}bubbles_inter:before { content: $ionicon-bubbles_inter; }
+.#{$ionicons-prefix}bubbles_left:before { content: $ionicon-bubbles_left; }
+.#{$ionicons-prefix}bubbles_right:before { content: $ionicon-bubbles_right; }
+.#{$ionicons-prefix}chevron_down:before { content: $ionicon-chevron_down; }
+.#{$ionicons-prefix}chevron_left:before { content: $ionicon-chevron_left; }
+.#{$ionicons-prefix}chevron_right:before { content: $ionicon-chevron_right; }
+.#{$ionicons-prefix2}chevron_down:before { content: $ionicon-chevron_down; }
+.#{$ionicons-prefix2}chevron_right:before { content: $ionicon-chevron_right; }
+.#{$ionicons-prefix}clock:before { content: $ionicon-clock; }
+.#{$ionicons-prefix}close:before { content: $ionicon-close; }
+.#{$ionicons-prefix}condom:before, .#{$ionicons-prefix}distributeur:before { content: $ionicon-condom; }
+.#{$ionicons-prefix}condomfemme:before { content: $ionicon-condomfemme; }
+.#{$ionicons-prefix}contraception:before { content: $ionicon-contraception; }
+.#{$ionicons-prefix}exclam:before { content: $ionicon-exclam; }
+.#{$ionicons-prefix}geopos:before { content: $ionicon-geopos; }
+.#{$ionicons-prefix}home:before { content: $ionicon-home; }
+.#{$ionicons-prefix}interrogation:before { content: $ionicon-interrogation; }
+.#{$ionicons-prefix}ist:before { content: $ionicon-ist; }
+.#{$ionicons-prefix}magnify:before { content: $ionicon-magnify; }
+.#{$ionicons-prefix}mairie:before { content: $ionicon-mairie; }
+.#{$ionicons-prefix}metro:before { content: $ionicon-metro; }
+.#{$ionicons-prefix}navicon:before { content: $ionicon-navicon; }
+.#{$ionicons-prefix}phone:before { content: $ionicon-phone; }
+.#{$ionicons-prefix}planningfam:before, .#{$ionicons-prefix}planning_familial:before { content: $ionicon-planningfam; }
+.#{$ionicons-prefix}plume:before, .#{$ionicons-prefix}presse:before { content: $ionicon-plume; }
+.#{$ionicons-prefix}plus:before, .#{$ionicons-prefix}depistage_fixe:before, .#{$ionicons-prefix}pharmacie:before { content: $ionicon-plus; }
+.#{$ionicons-prefix}plus_light:before { content: $ionicon-plus_light; }
+.#{$ionicons-prefix}poi:before { content: $ionicon-poi; }
+.#{$ionicons-prefix}signal:before { content: $ionicon-signal; }
+.#{$ionicons-prefix}star:before, .#{$ionicons-prefix}depistage_mobile:before, .#{$ionicons-prefix}operation_speciale:before { content: $ionicon-star; }
+.#{$ionicons-prefix}supermarket:before, .#{$ionicons-prefix}supermarche:before { content: $ionicon-supermarket; }
+.#{$ionicons-prefix}tpe:before { content: $ionicon-tpe; }
+.#{$ionicons-prefix}walker:before { content: $ionicon-walker; }
+.ion-record:before { content: $ionicon-record; }
+.#{$ionicons-prefix}ivg:before{ content: $ionicon-ivg; }
+.#{$ionicons-prefix}centre_decoute:before {content: $ionicon-centre_decoute; }
